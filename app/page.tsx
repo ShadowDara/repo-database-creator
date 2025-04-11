@@ -67,7 +67,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Learn
+          Learn not
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
