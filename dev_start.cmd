@@ -1,3 +1,3 @@
-:: to start the programm for develeping
+:: to start the programm for locally develeping
 
 npm run dev
