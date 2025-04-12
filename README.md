@@ -1,3 +1,33 @@
+<!-- written by Shadowdara -->
+
+# Repository Database Creator
+
+***Check it out [here](https://repo-database-creator.vercel.app/repos?user=weuritz8u&raw=false)***
+
+## Arguments
+
+<table>
+    <tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Showcase</th>
+    </tr>
+    <tr>
+        <td><code>&user=USERNAME</code></td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+    <tr>
+        <td><code>&raw=true</code></td>
+        <td>x</td>
+        <td>x</td>
+    </tr>
+</table>
+
+---
+
+# Old Reademe Part (i am not finished yet)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
