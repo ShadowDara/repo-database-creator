@@ -16,13 +16,13 @@ interface Repository {
   language: string | null
 }
 
-// Use the correct type for page props in App Router
-type Props = {
+// Use the correct type for page PageProps in App Router
+type PageProps = {
   params: { slug?: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function ReposPage({ searchParams }: Props) {
+export default async function ReposPage({ searchParams }: PageProps) {
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u"
 
   try {
