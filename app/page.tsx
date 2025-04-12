@@ -1,3 +1,7 @@
+// app/page.tsx
+//
+// Homepage - Repo Database Creator
+
 import Image from "next/image";
 
 export default function Home() {
