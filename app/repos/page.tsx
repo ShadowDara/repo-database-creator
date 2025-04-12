@@ -2,6 +2,8 @@
 
 import { Metadata } from "next";
 
+import { useSearchParams } from 'next/navigation';
+
 // Declare that this page is dynamic and will not be statically generated
 export const dynamic = "force-dynamic";
 
@@ -27,16 +29,15 @@ export default async function ReposPage({
   // Ensure 'user' is a string or fallback to default username
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u";
 
+  // Fetch repositories for the user
   try {
-    // Fetch repositories from GitHub API
     const res = await fetch(`https://api.github.com/users/${username}/repos`, {
-      next: { revalidate: 60 }, // Cache for 60 seconds
+      next: { revalidate: 60 }, // Cache and revalidate every 60 seconds
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
     });
 
-    // If the response is not OK, show an error message
     if (!res.ok) {
       return (
         <div className="p-6">
