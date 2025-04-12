@@ -31,7 +31,7 @@ export default async function ReposPage({
   // Fetch repositories for the user
   try {
     const res = await fetch(`https://api.github.com/users/${user}/repos`, {
-      next: { revalidate: 60 }, // Cache and revalidate every 60 seconds
+      next: { revalidate: 60000 }, // Cache and revalidate every 60.000 seconds, 1.000 minutes, 16,6 hours
       headers: {
         Accept: "application/vnd.github.v3+json",
       },

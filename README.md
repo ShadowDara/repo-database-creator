@@ -4,6 +4,10 @@
 
 ***Check it out [here](https://repo-database-creator.vercel.app/repos?user=weuritz8u&raw=false)***
 
+## Infos
+
+- we use caching to prevent server usage *(16,6 hours)*
+
 ## Arguments
 
 <table>
@@ -11,16 +15,19 @@
         <th>Argument</th>
         <th>Description</th>
         <th>Showcase</th>
+        <th>Variable Type</th>
     </tr>
     <tr>
         <td><code>&user=USERNAME</code></td>
         <td>x</td>
         <td>x</td>
+        <td>String</td>
     </tr>
     <tr>
         <td><code>&raw=true</code></td>
         <td>x</td>
         <td>x</td>
+        <td>Boolean</td>
     </tr>
 </table>
 
