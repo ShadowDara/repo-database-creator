@@ -1,7 +1,5 @@
 // app/repos/page.tsx
 
-import Link from "next/link";
-
 import type { Metadata } from "next"
 
 // Declare that this page is dynamic and will not be statically generated
@@ -25,7 +23,7 @@ export default async function ReposPage({
   searchParams,
 }: {
   params: Promise <{ repodata: string}>;
-  searchParams: Promise <{ user?: string | undefined }>
+  searchParams: Promise <{ user?: string | undefined, raw?: boolean | undefined }>
 }) {
   const { user = "weuritz8u" } = await searchParams;
 
