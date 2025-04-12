@@ -1,8 +1,6 @@
-// app/repos/page.tsx
-
 import { Metadata } from "next";
 
-// Declare that this page is dynamic and will not be statically generated
+// Declare dynamic rendering option
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
@@ -18,12 +16,15 @@ interface Repository {
   language: string | null;
 }
 
-// Page component receiving the props (searchParams)
+// Correctly typed PageProps for Next.js App Router
+// `params` will contain dynamic route params, `searchParams` contains query parameters
+interface PageProps {
+  searchParams: { user?: string | string[] }; // query parameters, like ?user=someuser
+}
+
 export default async function ReposPage({
   searchParams,
-}: {
-  searchParams: { user?: string | string[] };
-}) {
+}: PageProps) {
   // Ensure 'user' is a string or fallback to default username
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u";
 
@@ -51,7 +52,7 @@ export default async function ReposPage({
     // Parse the response as a list of repositories
     const repos: Repository[] = await res.json();
 
-    // Return the component with the fetched data
+    // Render the successful response
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">
