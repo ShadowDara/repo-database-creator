@@ -1,20 +1,22 @@
 // app/repos/page.tsx
-async function getPublicRepos() {
-    const res = await fetch("https://api.github.com/users/weuritz8u/repos");
+interface Props {
+    searchParams: { user?: string };
+  }
   
-    if (!res.ok) {
-      throw new Error("Fehler beim Abrufen der Daten");
-    }
-  
+  async function getPublicRepos(username: string) {
+    const res = await fetch(`https://api.github.com/users/${username}/repos`);
+    if (!res.ok) throw new Error("Fehler beim Abrufen der Daten");
     return res.json();
   }
   
-  export default async function ReposPage() {
-    const repos = await getPublicRepos();
+  export default async function ReposPage({ searchParams }: Props) {
+    const username = searchParams.user || "weuritz8u";
+    const repos = await getPublicRepos(username);
   
     return (
       <div className="p-6">
-        <h1 className="text-2xl font-bold mb-4">Meine öffentlichen Repositories</h1>
+        <h1 className="text-2xl font-bold mb-4">Repositories von <span className="text-blue-600">{username}</span></h1>
+
         <table className="w-full table-auto border-collapse border border-gray-300">
           <thead>
             <tr className="bg-gray-100">
@@ -22,6 +24,7 @@ async function getPublicRepos() {
               <th className="border border-gray-300 px-4 py-2 text-left">Sprache</th>
             </tr>
           </thead>
+
           <tbody>
             {repos.map((repo: any) => (
               <tr key={repo.id} className="hover:bg-gray-50">
