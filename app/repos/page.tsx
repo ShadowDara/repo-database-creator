@@ -1,18 +1,21 @@
 // repo list page
 
-async function getPublicRepos(username: string) {
-    const res = await fetch(`https://api.github.com/users/${username}/repos`);
-    if (!res.ok) throw new Error("Error while loading the data!");
-    return res.json();
-}
+export default async function ReposPage({ searchParams }: { searchParams: { user?: string } }) {
+    const username = searchParams.user || "weuritz8u";
   
-export default async function ReposPage({
-    searchParams,
-}: {
-    searchParams?: { user?: string };
-}) {
-    const username = searchParams?.user || "weuritz8u";
-    const repos = await getPublicRepos(username);
+    const res = await fetch(`https://api.github.com/users/${username}/repos`, {
+      next: { revalidate: 60 }, // Caching to prevent server usage!
+    });
+  
+    if (!res.ok) {
+      return (
+        <div className="p-6">
+          <h1 className="text-2xl font-bold text-red-600">Nutzer nicht gefunden 😢</h1>
+        </div>
+      );
+    }
+  
+    const repos = await res.json();
   
     return (
       <div className="p-6">
