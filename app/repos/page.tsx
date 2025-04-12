@@ -18,7 +18,7 @@ interface Repository {
 
 // Use the correct type for `searchParams` in the App Router structure
 type PageProps = {
-  searchParams: { user?: string | string[] | undefined } // User parameter from the URL
+  searchParams: { user: string | string[] | undefined } // User parameter from the URL
 }
 
 export default async function ReposPage({ searchParams }: PageProps) {
