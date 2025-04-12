@@ -1,17 +1,17 @@
 // repo list page
 
-interface PageProps {
-    searchParams: { user?: string };
-  }
-  
-  async function getPublicRepos(username: string) {
+async function getPublicRepos(username: string) {
     const res = await fetch(`https://api.github.com/users/${username}/repos`);
     if (!res.ok) throw new Error("Error while loading the data!");
     return res.json();
-  }
+}
   
-  export default async function ReposPage({ searchParams }: PageProps) {
-    const username = searchParams.user || "weuritz8u";
+export default async function ReposPage({
+    searchParams,
+}: {
+    searchParams?: { user?: string };
+}) {
+    const username = searchParams?.user || "weuritz8u";
     const repos = await getPublicRepos(username);
   
     return (
