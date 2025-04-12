@@ -61,7 +61,7 @@ export default async function ReposPage({
         ) : (
           <table className="w-full table-auto border-collapse border border-gray-300">
             <thead>
-              <tr className="bg-gray-100">
+              <tr className="">
                 <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
                 <th className="border border-gray-300 px-4 py-2 text-left">Language</th>
               </tr>
