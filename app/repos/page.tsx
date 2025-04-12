@@ -1,8 +1,9 @@
 // app/repos/page.tsx
 
 import { Metadata } from "next";
+import PageProps from 'next/types'
 
-export const dynamic = "force-dynamic"; // optional: disables full static rendering
+export const dynamic = "force-dynamic"; // Optional: disables full static rendering
 
 export const metadata: Metadata = {
   title: "GitHub Repositories",
@@ -16,17 +17,17 @@ interface Repository {
   language: string | null;
 }
 
-// `PageProps` for the App Router, includes `searchParams` and `params`
+// Correctly typed PageProps for Next.js App Router
 type PageProps = {
   searchParams: { user?: string | string[] }; // User parameter from the query string
 };
 
 export default async function ReposPage({ searchParams }: PageProps) {
-  // Ensure `user` is checked as a string (fallback to a default username)
+  // Ensure `user` is checked as a string, or fallback to a default username
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u";
 
   try {
-    // Fetching repositories from the GitHub API
+    // Fetch repositories from the GitHub API
     const res = await fetch(`https://api.github.com/users/${username}/repos`, {
       next: { revalidate: 60 }, // Cache and revalidation after 60 seconds
       headers: {
