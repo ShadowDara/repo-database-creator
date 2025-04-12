@@ -23,7 +23,7 @@ interface Repository {
 export default async function ReposPage({
     searchParams,
 }: {
-    searchParams: { user?: string | undefined };  // Flexible Struktur für andere Parameter
+    searchParams: { user?: string};  // Flexible Struktur für andere Parameter
 }) {
     // Den 'user' Parameter extrahieren und sicherstellen, dass er existiert
     const { user, ...restParams } = searchParams;  // Extrahiere 'user' und lasse alle anderen Parameter im 'restParams'
