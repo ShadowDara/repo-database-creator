@@ -1,9 +1,9 @@
-// pages/[slug].tsx
-import { useRouter } from 'next/router';
+// app/[slug]/page.tsx
+
+import { useParams } from 'next/navigation';  // Importiere aus 'next/navigation'
 
 const Page = () => {
-  const router = useRouter();
-  const { slug } = router.query;  // slug ist der Parameter in der URL
+  const { slug } = useParams();  // Hol dir den slug-Parameter
 
   return (
     <div>
