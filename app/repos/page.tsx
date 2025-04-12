@@ -1,6 +1,13 @@
 // app/repos/page.tsx
 
+import type { Metadata } from "next"
+
 export const dynamic = "force-dynamic" // optional: disables full static rendering
+
+export const metadata: Metadata = {
+  title: "GitHub Repositories",
+  description: "View GitHub repositories for a user",
+}
 
 interface Repository {
   id: number
@@ -9,10 +16,14 @@ interface Repository {
   language: string | null
 }
 
+interface SearchParams {
+  user?: string
+}
+
 export default async function ReposPage({
   searchParams,
 }: {
-  searchParams?: { user?: string }
+  searchParams: SearchParams
 }) {
   const username = searchParams?.user || "weuritz8u"
 
@@ -45,6 +56,7 @@ export default async function ReposPage({
           <p>No repositories found for this user.</p>
         ) : (
           <table className="w-full table-auto border-collapse border border-gray-300">
+
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
@@ -69,6 +81,7 @@ export default async function ReposPage({
                 </tr>
               ))}
             </tbody>
+
           </table>
         )}
       </div>
