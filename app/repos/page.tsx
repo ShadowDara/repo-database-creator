@@ -1,21 +1,22 @@
-// app/repos/page.tsx
-interface Props {
+// repo list page
+
+interface PageProps {
     searchParams: { user?: string };
   }
   
   async function getPublicRepos(username: string) {
     const res = await fetch(`https://api.github.com/users/${username}/repos`);
-    if (!res.ok) throw new Error("Fehler beim Abrufen der Daten");
+    if (!res.ok) throw new Error("Error while loading the data!");
     return res.json();
   }
   
-  export default async function ReposPage({ searchParams }: Props) {
+  export default async function ReposPage({ searchParams }: PageProps) {
     const username = searchParams.user || "weuritz8u";
     const repos = await getPublicRepos(username);
   
     return (
       <div className="p-6">
-        <h1 className="text-2xl font-bold mb-4">Repositories von <span className="text-blue-600">{username}</span></h1>
+        <h1 className="text-2xl font-bold mb-4">public repositories by <span className="text-blue-600">{username}</span></h1>
 
         <table className="w-full table-auto border-collapse border border-gray-300">
           <thead>
