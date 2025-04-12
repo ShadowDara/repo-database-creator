@@ -1,5 +1,7 @@
 // app/[slug]/page.tsx
 
+"use client";  // Diese Direktive markiert die Datei als Client-Komponente
+
 import { useParams } from 'next/navigation';  // Importiere aus 'next/navigation'
 
 const Page = () => {
