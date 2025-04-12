@@ -1,5 +1,5 @@
 // app/repos/page.tsx
-
+/*
 import { Metadata } from "next"
 
 export const dynamic = "force-dynamic" // optional: disables full static rendering
@@ -100,3 +100,4 @@ export default async function ReposPage({ searchParams }: PageProps) {
     )
   }
 }
+*/
