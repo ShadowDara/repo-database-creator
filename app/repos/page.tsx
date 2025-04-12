@@ -19,8 +19,9 @@ interface Repository {
 
 // Correctly typed PageProps for Next.js App Router
 type PageProps = {
-  searchParams: { user?: string | string[] }; // User parameter from the query string
-};
+  params: { slug?: string } // for dynamic routes like [slug]
+  searchParams: { user?: string | string[] } // query parameters, like ?user=someuser
+}
 
 export default async function ReposPage({ searchParams }: PageProps) {
   // Ensure `user` is checked as a string, or fallback to a default username
