@@ -1,5 +1,7 @@
 // app/repos/page.tsx
 
+import Link from "next/link";
+
 import type { Metadata } from "next"
 
 // Declare that this page is dynamic and will not be statically generated
@@ -18,16 +20,19 @@ interface Repository {
   language: string | null
 }
 
-// Page component with the correct type definition for App Router pages
 export default async function ReposPage({
-  params,
-  searchParams,
+    searchParams,
 }: {
-  params: {}
-  searchParams: { [key: string]: string | string[] | undefined }
+    searchParams: { user?: string | undefined };  // Flexible Struktur für andere Parameter
 }) {
-  // Ensure 'user' is a string or fallback to default username
-  const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u"
+    // Den 'user' Parameter extrahieren und sicherstellen, dass er existiert
+    const { user, ...restParams } = searchParams;  // Extrahiere 'user' und lasse alle anderen Parameter im 'restParams'
+  
+    // Standardwert für 'user' setzen, falls er nicht da ist
+    const username = user ? user : "weuritz8u";  // Falls kein 'user' existiert, setze "weuritz8u" als Standard
+  
+    // Entferne alle nicht 'user' Parameter aus 'restParams' (wir behalten nur 'user')
+    const cleanedParams = { user, ...restParams };
 
   // Fetch repositories for the user
   try {
