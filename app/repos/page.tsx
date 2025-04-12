@@ -1,7 +1,8 @@
 // app/repos/page.tsx
 
 import { Metadata } from "next";
-import PageProps from 'next/types'
+import { NextPage } from "next";
+import PageProps from 'next/types';
 
 export const dynamic = "force-dynamic"; // Optional: disables full static rendering
 
