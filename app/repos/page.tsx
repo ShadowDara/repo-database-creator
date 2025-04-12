@@ -16,16 +16,14 @@ interface Repository {
   language: string | null
 }
 
-interface SearchParams {
-  user?: string
+// Use the correct type for page props in App Router
+type Props = {
+  params: { slug?: string }
+  searchParams: { [key: string]: string | string[] | undefined }
 }
 
-export default async function ReposPage({
-  searchParams,
-}: {
-  searchParams: SearchParams
-}) {
-  const username = searchParams?.user || "weuritz8u"
+export default async function ReposPage({ searchParams }: Props) {
+  const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u"
 
   try {
     const res = await fetch(`https://api.github.com/users/${username}/repos`, {
