@@ -16,25 +16,26 @@ interface Repository {
   language: string | null
 }
 
-// Use the correct type for `PageProps` in the app router structure
+// Use the correct type for `searchParams` in the App Router structure
 type PageProps = {
-  searchParams: { [key: string]: string | string[] | undefined }
+  searchParams: { user?: string | string[] | undefined } // User parameter from the URL
 }
 
 export default async function ReposPage({ searchParams }: PageProps) {
-  // Ensure that `user` is checked correctly as a string
+  // Ensure `user` is checked as a string
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u"
 
   try {
-    // Abrufen der Repositories von GitHub API
+    // Fetching repositories from the GitHub API
     const res = await fetch(`https://api.github.com/users/${username}/repos`, {
-      next: { revalidate: 60 }, // Cache and revalidation after 60 seconds
+      next: { revalidate: 60 },
+      // Cache and revalidation after 60 seconds
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
     })
 
-    // If the answer is not OK, display an error message
+    // If the response is not OK, show an error message
     if (!res.ok) {
       return (
         <div className="p-6">
@@ -44,7 +45,7 @@ export default async function ReposPage({ searchParams }: PageProps) {
       )
     }
 
-    // Retrieve repositories from the API as JSON
+    // Retrieve the repositories from the API as JSON
     const repos: Repository[] = await res.json()
 
     // Render successful response
@@ -62,7 +63,7 @@ export default async function ReposPage({ searchParams }: PageProps) {
             <thead>
               <tr className="bg-gray-100">
                 <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
-                <th className="border border-gray-300 px-4 py-2 text-left">Sprache</th>
+                <th className="border border-gray-300 px-4 py-2 text-left">Language</th>
               </tr>
             </thead>
 
@@ -89,7 +90,7 @@ export default async function ReposPage({ searchParams }: PageProps) {
       </div>
     )
   } catch (error) {
-    // Fehlerbehandlung, falls etwas beim Abrufen schiefgeht
+    // Error handling if something goes wrong with the fetch
     console.error("Error fetching repositories:", error)
     return (
       <div className="p-6">
