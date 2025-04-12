@@ -1,6 +1,6 @@
 // app/repos/page.tsx
 
-import type { Metadata } from "next"
+import { Metadata } from "next"
 
 export const dynamic = "force-dynamic" // optional: disables full static rendering
 
@@ -16,23 +16,25 @@ interface Repository {
   language: string | null
 }
 
-// Use the correct type for page PageProps in App Router
+// Use the correct type for `PageProps` in the app router structure
 type PageProps = {
-  params: { slug?: string }
   searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export default async function ReposPage({ searchParams }: PageProps) {
+  // Ensure that `user` is checked correctly as a string
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u"
 
   try {
+    // Abrufen der Repositories von GitHub API
     const res = await fetch(`https://api.github.com/users/${username}/repos`, {
-      next: { revalidate: 60 },
+      next: { revalidate: 60 }, // Cache and revalidation after 60 seconds
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
     })
 
+    // If the answer is not OK, display an error message
     if (!res.ok) {
       return (
         <div className="p-6">
@@ -42,8 +44,10 @@ export default async function ReposPage({ searchParams }: PageProps) {
       )
     }
 
+    // Retrieve repositories from the API as JSON
     const repos: Repository[] = await res.json()
 
+    // Render successful response
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">
@@ -85,6 +89,7 @@ export default async function ReposPage({ searchParams }: PageProps) {
       </div>
     )
   } catch (error) {
+    // Fehlerbehandlung, falls etwas beim Abrufen schiefgeht
     console.error("Error fetching repositories:", error)
     return (
       <div className="p-6">
