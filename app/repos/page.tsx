@@ -1,16 +1,16 @@
 // app/repos/page.tsx
 
 import { Metadata } from "next";
-import { NextPage } from "next";
-import PageProps from 'next/types';
 
-export const dynamic = "force-dynamic"; // Optional: disables full static rendering
+// Declare that this page is dynamic and will not be statically generated
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: "GitHub Repositories",
   description: "View GitHub repositories for a user",
 };
 
+// Repository interface for type safety
 interface Repository {
   id: number;
   name: string;
@@ -18,20 +18,19 @@ interface Repository {
   language: string | null;
 }
 
-// Correctly typed PageProps for Next.js App Router
-type PageProps = {
-  params: { slug?: string } // for dynamic routes like [slug]
-  searchParams: { user?: string | string[] } // query parameters, like ?user=someuser
-}
-
-export default async function ReposPage({ searchParams }: PageProps) {
-  // Ensure `user` is checked as a string, or fallback to a default username
+// Page component receiving the props (searchParams)
+export default async function ReposPage({
+  searchParams,
+}: {
+  searchParams: { user?: string | string[] };
+}) {
+  // Ensure 'user' is a string or fallback to default username
   const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u";
 
   try {
-    // Fetch repositories from the GitHub API
+    // Fetch repositories from GitHub API
     const res = await fetch(`https://api.github.com/users/${username}/repos`, {
-      next: { revalidate: 60 }, // Cache and revalidation after 60 seconds
+      next: { revalidate: 60 }, // Cache for 60 seconds
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
@@ -49,10 +48,10 @@ export default async function ReposPage({ searchParams }: PageProps) {
       );
     }
 
-    // Retrieve the repositories from the API as JSON
+    // Parse the response as a list of repositories
     const repos: Repository[] = await res.json();
 
-    // Render successful response
+    // Return the component with the fetched data
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">
@@ -92,7 +91,6 @@ export default async function ReposPage({ searchParams }: PageProps) {
       </div>
     );
   } catch (error) {
-    // Error handling if something goes wrong with the fetch
     console.error("Error fetching repositories:", error);
     return (
       <div className="p-6">
