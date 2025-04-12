@@ -2,7 +2,7 @@
 
 # Repository Database Creator
 
-***Check it out [here](https://repo-database-creator.vercel.app/repos?user=weuritz8u&raw=false)***
+***Check it out [here](https://repo-database-creator.vercel.app/api/repos?user=weuritz8u&raw=false) for User `weuritz8u`***
 
 ## Arguments
 
