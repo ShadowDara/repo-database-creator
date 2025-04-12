@@ -23,10 +23,10 @@ export default async function ReposPage({
   searchParams,
 }: {
   params: Promise<{ repodata: string }>;
-  searchParams: Promise<{ user?: string | undefined, raw?: boolean | undefined; }>
+  searchParams: Promise<{ user?: string | undefined; raw?: string | undefined; }>
 }) {
   const { user = "weuritz8u" } = await searchParams;
-  const { raw = true } = await searchParams
+  const { raw = "true" } = await searchParams;
 
   // Fetch repositories for the user
   try {
@@ -56,12 +56,12 @@ export default async function ReposPage({
       )
     }
     else {
-      if (raw == true) {
+      if (raw == 'true') {
         return (
         <div className="p-6">
           <p>Name,Language</p>
           {repos.map((repo) => (
-            <p>{repo.name},{repo.language || "–"}</p>
+            <p key={repo.id}>{repo.name},{repo.language || "–"}</p>
           ))}
         </div>
         )
