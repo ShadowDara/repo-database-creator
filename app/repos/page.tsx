@@ -20,23 +20,18 @@ interface Repository {
   language: string | null
 }
 
+// Page component with the correct type definition for App Router pages
 export default async function ReposPage({
-    searchParams,
+  searchParams,
 }: {
-    searchParams: { user?: string};  // Flexible Struktur für andere Parameter
+  params: Promise <{ repodata: string}>;
+  searchParams: Promise <{ user?: string | undefined }>
 }) {
-    // Den 'user' Parameter extrahieren und sicherstellen, dass er existiert
-    const { user, ...restParams } = searchParams;  // Extrahiere 'user' und lasse alle anderen Parameter im 'restParams'
-  
-    // Standardwert für 'user' setzen, falls er nicht da ist
-    const username = user ? user : "weuritz8u";  // Falls kein 'user' existiert, setze "weuritz8u" als Standard
-  
-    // Entferne alle nicht 'user' Parameter aus 'restParams' (wir behalten nur 'user')
-    const cleanedParams = { user, ...restParams };
+  const { user = "weuritz8u" } = await searchParams;
 
   // Fetch repositories for the user
   try {
-    const res = await fetch(`https://api.github.com/users/${username}/repos`, {
+    const res = await fetch(`https://api.github.com/users/${user}/repos`, {
       next: { revalidate: 60 }, // Cache and revalidate every 60 seconds
       headers: {
         Accept: "application/vnd.github.v3+json",
@@ -59,7 +54,7 @@ export default async function ReposPage({
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">
-          Public repositories by <span className="text-blue-600">{username}</span>
+          Public repositories by <span className="text-blue-600">{user}</span>
         </h1>
 
         {repos.length === 0 ? (
