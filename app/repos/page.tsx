@@ -39,6 +39,7 @@ export default async function ReposPage({
     })
 
     if (!res.ok) {
+      // catch errors!
       return (
         <div className="p-6">
           <h1 className="text-2xl font-bold text-red-600">User not found or API rate limit exceeded!</h1>
