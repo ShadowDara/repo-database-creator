@@ -1,33 +1,33 @@
 // app/repos/page.tsx
 
-import { Metadata } from "next";
-
-import { useSearchParams } from 'next/navigation';
+import type { Metadata } from "next"
 
 // Declare that this page is dynamic and will not be statically generated
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "GitHub Repositories",
   description: "View GitHub repositories for a user",
-};
+}
 
 // Repository interface for type safety
 interface Repository {
-  id: number;
-  name: string;
-  html_url: string;
-  language: string | null;
+  id: number
+  name: string
+  html_url: string
+  language: string | null
 }
 
-// Page component receiving the props (searchParams)
+// Page component with the correct type definition for App Router pages
 export default async function ReposPage({
+  params,
   searchParams,
 }: {
-  searchParams: { user?: string | string[] };
+  params: {}
+  searchParams: { [key: string]: string | string[] | undefined }
 }) {
   // Ensure 'user' is a string or fallback to default username
-  const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u";
+  const username = typeof searchParams.user === "string" ? searchParams.user : "weuritz8u"
 
   // Fetch repositories for the user
   try {
@@ -36,21 +36,19 @@ export default async function ReposPage({
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
-    });
+    })
 
     if (!res.ok) {
       return (
         <div className="p-6">
-          <h1 className="text-2xl font-bold text-red-600">
-            User not found or API rate limit exceeded!
-          </h1>
+          <h1 className="text-2xl font-bold text-red-600">User not found or API rate limit exceeded!</h1>
           <p className="mt-2">Status: {res.status}</p>
         </div>
-      );
+      )
     }
 
     // Parse the response as a list of repositories
-    const repos: Repository[] = await res.json();
+    const repos: Repository[] = await res.json()
 
     // Return the component with the fetched data
     return (
@@ -90,14 +88,14 @@ export default async function ReposPage({
           </table>
         )}
       </div>
-    );
+    )
   } catch (error) {
-    console.error("Error fetching repositories:", error);
+    console.error("Error fetching repositories:", error)
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold text-red-600">Error fetching repositories</h1>
         <p className="mt-2">Please try again later.</p>
       </div>
-    );
+    )
   }
 }
