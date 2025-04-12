@@ -1,5 +1,7 @@
 // app/posts/[slug]/page.tsx
 
+"use client";
+
 import { useParams, useSearchParams } from 'next/navigation';
 
 const PostPage = () => {
