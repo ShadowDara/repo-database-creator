@@ -16,6 +16,7 @@ interface Repository {
   name: string
   html_url: string
   language: string | null
+  description: string | null
 }
 
 // Page component with the correct type definition for App Router pages
@@ -82,6 +83,7 @@ export default async function ReposPage({
                   <tr className="">
                     <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
                     <th className="border border-gray-300 px-4 py-2 text-left">Language</th>
+                    <th className="border border-gray-300 px-4 py-2 text-left">Description</th>
                   </tr>
                 </thead>
 
@@ -99,6 +101,7 @@ export default async function ReposPage({
                         </a>
                       </td>
                       <td className="border border-gray-300 px-4 py-2">{repo.language || "-"}</td>
+                      <td className="border border-gray-300 px-4 py-2">{repo.description || "-"}</td>
                     </tr>
                   ))}
                 </tbody>
