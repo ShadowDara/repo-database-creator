@@ -25,7 +25,7 @@
     </tr>
     <tr>
         <td><code>&raw=true</code></td>
-        <td>x</td>
+        <td>to display the output as an raw csv file, <i>(redirecting to api/repos_raw)</i></td>
         <td>x</td>
         <td>Boolean</td>
     </tr>

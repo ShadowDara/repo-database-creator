@@ -25,6 +25,7 @@ export default async function ReposPage({
   params: Promise<{ repodata: string }>;
   searchParams: Promise<{ user?: string | undefined; raw?: string | undefined; }>
 }) {
+  const query = await (searchParams).toString();
   const { user = "weuritz8u" } = await searchParams;
   const { raw = "true" } = await searchParams;
 
@@ -56,15 +57,12 @@ export default async function ReposPage({
       )
     }
     else {
-      if (raw == 'true') {
+      if (raw === 'true') {
         return (
-        <div className="p-6">
-          <p>Name,Language</p>
-          {repos.map((repo) => (
-            <p key={repo.id}>{repo.name},{repo.language || "–"}</p>
-          ))}
-        </div>
-        )
+          <head>
+            <meta httpEquiv="refresh" content={`0;url=repos_raw?${query}`} />
+          </head>
+        );
       }
 
       else {
@@ -99,7 +97,7 @@ export default async function ReposPage({
                           {repo.name}
                         </a>
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">{repo.language || "–"}</td>
+                      <td className="border border-gray-300 px-4 py-2">{repo.language || "-"}</td>
                     </tr>
                   ))}
                 </tbody>
