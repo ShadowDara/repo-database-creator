@@ -36,6 +36,7 @@ export default async function ReposPage({
       headers: {
         Accept: "application/vnd.github.v3+json",
       },
+      cache: "force-cache"
     })
 
     if (!res.ok) {

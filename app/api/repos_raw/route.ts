@@ -13,6 +13,8 @@ export async function GET(request: Request) {
 
   const res = await fetch(`https://api.github.com/users/${user}/repos`, {
     headers: { Accept: "application/vnd.github.v3+json" },
+    next: { revalidate: 60000 }, // Cache and revalidate every 60.000 seconds, 1.000 minutes, 16,6 hours
+    cache: "force-cache",
   });
 
   if (!res.ok) {
@@ -30,7 +32,7 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
-      //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      // "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
     },
   });
 }
