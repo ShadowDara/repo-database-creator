@@ -1,23 +1,4 @@
 import { NextResponse } from "next/server";
-import Cors from "cors";
-
-// CORS initialisieren
-const cors = Cors({
-  methods: ["GET", "POST", "OPTIONS"],
-  origin: "*", // Hier kannst du auch eine spezifische URL angeben, wenn du möchtest
-});
-
-// Hilfsfunktion, um CORS Middleware auszuführen
-function runMiddleware(req: Request, fn: Function) {
-  return new Promise((resolve, reject) => {
-    fn(req, null, (result: unknown) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-      return resolve(result);
-    });
-  });
-}
 
 interface Repository {
   id: number;
@@ -27,25 +8,34 @@ interface Repository {
   description: string | null;
 }
 
-// API-Route: Einzige GET-Funktion
 export async function GET(request: Request) {
-  console.log("GET-Anfrage empfangen");
+  // CORS-Header manuell setzen
+  const response = await fetchRepos(request);
 
-  // CORS Middleware ausführen
-  try {
-    console.log("CORS Middleware wird ausgeführt...");
-    await runMiddleware(request, cors);
-    console.log("CORS Middleware abgeschlossen");
-  } catch (error) {
-    console.error("Fehler bei CORS:", error);
-    return new NextResponse("CORS Fehler", { status: 500 });
+  if (!response) {
+    return new NextResponse("Error fetching repos", { status: 500 });
   }
 
+  // Gib die CORS-Header zusammen mit den Daten zurück
+  const csvData = await response;
+
+  const nextResponse = new NextResponse(csvData, {
+    status: 200,
+    headers: {
+      "Content-Type": "text/plain",
+      "Access-Control-Allow-Origin": "*", // CORS aktivieren
+      "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type",
+    },
+  });
+
+  return nextResponse;
+}
+
+async function fetchRepos(request: Request) {
   const { searchParams } = new URL(request.url);
   const user = searchParams.get("user") || "weuritz8u";
   const includeDescription = searchParams.get("description") || "true";
-
-  console.log(`Abrufen der Repos für Benutzer: ${user}`);
 
   // GitHub API für Repositories
   const apiRes = await fetch(`https://api.github.com/users/${user}/repos`, {
@@ -56,11 +46,10 @@ export async function GET(request: Request) {
 
   if (!apiRes.ok) {
     console.error("Fehler beim Abrufen der Repos:", apiRes.statusText);
-    return new NextResponse("Error fetching repos", { status: apiRes.status });
+    return null;
   }
 
   const repos: Repository[] = await apiRes.json();
-  console.log("Repos erfolgreich abgerufen:", repos);
 
   const csvLines = [
     "Name,Language,Description",
@@ -70,19 +59,5 @@ export async function GET(request: Request) {
     }),
   ];
 
-  console.log("CSV-Daten generiert:");
-
-  // CORS Header setzen und die CSV-Daten zurückgeben
-  const response = new NextResponse(csvLines.join("\n"), {
-    status: 200,
-    headers: {
-      "Content-Type": "text/plain",
-      // Falls du das als Datei anbieten möchtest, kannst du hier das Header hinzufügen:
-      // "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
-    },
-  });
-
-  console.log("Antwort gesendet:", response);
-
-  return response;
+  return csvLines.join("\n");
 }
