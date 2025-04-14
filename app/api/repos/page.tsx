@@ -106,7 +106,7 @@ export default async function ReposPage({
                     </tr>
                   ))}
                 </tbody>
-k
+
               </table>
             )}
           </div>
