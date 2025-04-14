@@ -1,4 +1,31 @@
 import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from 'next';
+import Cors from 'cors';
+
+// Initialisiere CORS
+const cors = Cors({
+  methods: ['GET', 'POST', 'OPTIONS'],
+  origin: '*', // oder deine Domain(s)
+});
+
+// Hilfsfunktion um Middleware zu verwenden
+function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: Function) {
+  return new Promise((resolve, reject) => {
+    fn(req, res, (result: unknown) => {
+      if (result instanceof Error) {
+        return reject(result);
+      }
+      return resolve(result);
+    });
+  });
+}
+
+// API Route
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  await runMiddleware(req, res, cors);
+
+  res.json({ message: 'CORS ist aktiv!' });
+}
 
 interface Repository {
   id: number;
