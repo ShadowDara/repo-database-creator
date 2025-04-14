@@ -50,7 +50,7 @@ export async function GET(request: Request) {
       const name = csvEscape(sanitizeCSVValue(r.name));
       const lang = csvEscape(r.language || "-");
       const desc = csvEscape(sanitizeCSVValue(description || "-"));
-      return `${name},${lang || "-"},${desc}'`;
+      return `${name},${lang || "-"},${desc}`;
     }),
   ];
 
