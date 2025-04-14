@@ -49,8 +49,8 @@ export async function GET(request: Request) {
       const description = includeDescription && r.description ? r.description : "-";
       const name = csvEscape(sanitizeCSVValue(r.name));
       const lang = csvEscape(r.language || "-");
-      const desc = csvEscape(sanitizeCSVValue(r.description || "-"));
-      return `${name},${lang || "-"},${desc}`;
+      const desc = csvEscape(sanitizeCSVValue(description || "-"));
+      return `${name},${lang || "-"},${desc}'`;
     }),
   ];
 
@@ -58,7 +58,7 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
-      "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
     },
   });
 
