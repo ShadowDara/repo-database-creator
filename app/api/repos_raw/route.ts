@@ -8,6 +8,14 @@ interface Repository {
   description: string | null;
 }
 
+function csvEscape(value: string) {
+  const needsQuotes = /[",\n\r]/.test(value);
+  if (needsQuotes) {
+    return `"${value.replace(/"/g, '""')}"`;
+  }
+  return value;
+}
+
 export async function GET(request: Request) {
 
   const { searchParams } = new URL(request.url);
@@ -31,17 +39,18 @@ export async function GET(request: Request) {
     "Name,Language,Description",
     ...repos.map((r) => {
       const description = includeDescription && r.description ? r.description : "-";
-      return `${r.name},${r.language || "-"},${description}`;
+      const name = csvEscape(r.name);
+      const lang = csvEscape(r.language || "-");
+      const desc = csvEscape(description || "-");
+      return `${name},${lang || "-"},${desc}`;
     }),
   ];
 
-  // CORS Header setzen und die CSV-Daten zurückgeben
   const response = new NextResponse(csvLines.join("\n"), {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
-      // Falls du das als Datei anbieten möchtest, kannst du hier das Header hinzufügen:
-      // "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
     },
   });
 
