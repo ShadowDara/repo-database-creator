@@ -42,7 +42,12 @@ value when the argument is not given!
 
 ## Other
 
-CORS are activated for the raw data page!
+CORS are activated for the raw data page! *soon*
+
+## Dev open
+
+<a href="https://repo-database-creator.vercel.app/api/repos_raw">Main Page</a>
+<a href="https://repo-database-creator-git-test-deployment-shadowdaras-projects.vercel.app/api/repos_raw">Test Deployment</a>
 
 ---
 
