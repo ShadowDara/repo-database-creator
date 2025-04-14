@@ -1,23 +1,4 @@
 import { NextResponse } from "next/server";
-import Cors from "cors";
-
-// CORS initialisieren
-const cors = Cors({
-  methods: ["GET", "POST", "OPTIONS"],
-  origin: "*", // Oder eine spezifische URL angeben
-});
-
-// Hilfsfunktion, um CORS Middleware auszuführen
-function runMiddleware(req: Request, fn: Function) {
-  return new Promise((resolve, reject) => {
-    fn(req, null, (result: unknown) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-      return resolve(result);
-    });
-  });
-}
 
 interface Repository {
   id: number;
