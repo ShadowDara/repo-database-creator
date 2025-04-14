@@ -24,11 +24,12 @@ export default async function ReposPage({
   searchParams,
 }: {
   params: Promise<{ repodata: string }>;
-  searchParams: Promise<{ user?: string | undefined; raw?: string | undefined; }>
+  searchParams: Promise<{ user?: string | undefined; raw?: string | undefined; description?: string | undefined;}>
 }) {
   const query = await (searchParams).toString();
   const { user = "weuritz8u" } = await searchParams;
   const { raw = "true" } = await searchParams;
+  const { description = "true" } = await searchParams;
 
   // Fetch repositories for the user
   try {
@@ -62,7 +63,7 @@ export default async function ReposPage({
       if (raw === 'true') {
         return (
           <head>
-            <meta httpEquiv="refresh" content={`0;url=repos_raw?${query}`} />
+            <meta httpEquiv="refresh" content={`0;url=repos_raw?${searchParams}`} />
           </head>
         );
       }
@@ -83,7 +84,7 @@ export default async function ReposPage({
                   <tr className="">
                     <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
                     <th className="border border-gray-300 px-4 py-2 text-left">Language</th>
-                    <th className="border border-gray-300 px-4 py-2 text-left">Description</th>
+                    {description === "true" && <th className="border border-gray-300 px-4 py-2 text-left">Description</th>}
                   </tr>
                 </thead>
 
@@ -101,7 +102,7 @@ export default async function ReposPage({
                         </a>
                       </td>
                       <td className="border border-gray-300 px-4 py-2">{repo.language || "-"}</td>
-                      <td className="border border-gray-300 px-4 py-2">{repo.description || "-"}</td>
+                      {description === "true" && <td className="border border-gray-300 px-4 py-2">{repo.description || "-"}</td>}
                     </tr>
                   ))}
                 </tbody>

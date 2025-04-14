@@ -5,11 +5,13 @@ interface Repository {
   name: string;
   html_url: string;
   language: string | null;
+  description: string | null;
 }
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const user = searchParams.get("user") || "weuritz8u";
+  const includeDescription = searchParams.get("description") || "true";
 
   const res = await fetch(`https://api.github.com/users/${user}/repos`, {
     headers: { Accept: "application/vnd.github.v3+json" },
@@ -24,15 +26,20 @@ export async function GET(request: Request) {
   const repos: Repository[] = await res.json();
 
   const csvLines = [
-    "Name,Language",
-    ...repos.map((r) => `${r.name},${r.language || "-"}`),
+    "Name,Language,Description",
+    ...repos.map((r) => {
+    
+      const description = includeDescription && r.description ? r.description : "-";
+
+      return `${r.name},${r.language || "-"},${description}`;
+    }),
   ];
 
   return new NextResponse(csvLines.join("\n"), {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
-      // "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
     },
   });
 }

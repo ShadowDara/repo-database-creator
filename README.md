@@ -10,6 +10,9 @@
 
 ## Arguments
 
+The content after the `=` in the table is the standard
+value when the argument is not given!
+
 <table>
     <tr>
         <th>Argument</th>
@@ -18,7 +21,7 @@
         <th>Variable Type</th>
     </tr>
     <tr>
-        <td><code>&user=USERNAME</code></td>
+        <td><code>&user=weuritz8u</code></td>
         <td>x</td>
         <td>x</td>
         <td>String</td>
@@ -26,6 +29,12 @@
     <tr>
         <td><code>&raw=true</code></td>
         <td>to display the output as an raw csv file, <i>(redirecting to api/repos_raw)</i></td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&description=true</code></td>
+        <td>to display the Repository Description</td>
         <td>x</td>
         <td>Boolean</td>
     </tr>
