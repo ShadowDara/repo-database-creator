@@ -8,14 +8,6 @@ interface Repository {
   description: string | null;
 }
 
-function sanitizeCSVValue(value: string) {
-  const dangerousStart = /^[=+\-@]/;
-  if (dangerousStart.test(value)) {
-    return `'${value}`; // Apostroph davor
-  }
-  return value;
-}
-
 function csvEscape(value: string) {
   const needsQuotes = /[",\n\r]/.test(value);
   if (needsQuotes) {
@@ -47,9 +39,9 @@ export async function GET(request: Request) {
     "Name,Language,Description",
     ...repos.map((r) => {
       const description = includeDescription && r.description ? r.description : "-";
-      const name = csvEscape(sanitizeCSVValue(r.name));
+      const name = csvEscape(r.name);
       const lang = csvEscape(r.language || "-");
-      const desc = csvEscape(sanitizeCSVValue(description || "-"));
+      const desc = csvEscape(description || "-");
       return `${name},${lang || "-"},${desc}`;
     }),
   ];
