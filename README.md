@@ -40,6 +40,10 @@ value when the argument is not given!
     </tr>
 </table>
 
+## Other
+
+CORS are activated for the raw data page!
+
 ---
 
 # Old Reademe Part (i am not finished yet)
