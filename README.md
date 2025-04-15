@@ -36,7 +36,7 @@ value when the argument is not given!
     </tr>
     <tr>
         <td><code>&language=true</code></td>
-        <td>to display the Repository Description</td>
+        <td>to display the Repository Language</td>
         <td>x</td>
         <td>Boolean</td>
     </tr>
