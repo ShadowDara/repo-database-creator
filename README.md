@@ -4,6 +4,8 @@
 
 ***Check it out [here](https://repo-database-creator.vercel.app/api/repos?user=weuritz8u&raw=false) for User `weuritz8u`***
 
+*I need to restructure this Readme soon!*
+
 ## Infos
 
 - we use caching to prevent server usage *(16,6 hours)*
@@ -29,6 +31,12 @@ value when the argument is not given!
     <tr>
         <td><code>&raw=true</code></td>
         <td>to display the output as an raw csv file, <i>(redirecting to api/repos_raw)</i></td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&language=true</code></td>
+        <td>to display the Repository Description</td>
         <td>x</td>
         <td>Boolean</td>
     </tr>
