@@ -21,6 +21,7 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const user = searchParams.get("user") || "weuritz8u";
   const includeDescription = searchParams.get("description") || "true";
+  const includeLanguage = searchParams.get("language") || "true";
 
   // GitHub API für Repositories
   const apiRes = await fetch(`https://api.github.com/users/${user}/repos`, {
@@ -36,21 +37,30 @@ export async function GET(request: Request) {
   const repos: Repository[] = await apiRes.json();
 
   const includeDesc = includeDescription === 'true';
-
+  const includeLang = includeLanguage === 'true';
+  
   const csvLines = [
-    includeDesc ? "Name,Language,Description" : "Name,Language",
+    // Dynamischer Header
+    [
+      "Name",
+      ...(includeLang ? ["Language"] : []),
+      ...(includeDesc ? ["Description"] : []),
+    ].join(","),
+  
+    // Repos
     ...repos.map((r) => {
       const name = csvEscape(r.name);
       const lang = csvEscape(r.language || "-");
+      const desc = csvEscape(r.description || "-");
   
-      if (includeDesc) {
-        const description = csvEscape(r.description || "-");
-        return `${name},${lang},${description}`;
-      } else {
-        return `${name},${lang}`;
-      }
+      return [
+        name,
+        ...(includeLang ? [lang] : []),
+        ...(includeDesc ? [desc] : []),
+      ].join(",");
     }),
   ];
+  
   
 
   const response = new NextResponse(csvLines.join("\n"), {
