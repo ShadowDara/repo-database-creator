@@ -20,25 +20,32 @@ interface Repository {
 export default async function ReposPage({
   searchParams,
 }: {
-  searchParams: { user?: string; raw?: string; language?: string; description?: string };
+  searchParams: Promise<{
+    user?: string;
+    raw?: string;
+    language?: string;
+    description?: string;
+  }>;
 }) {
-  // Stelle sicher, dass searchParams korrekt übergeben wird.
-  const params = {
-    user: searchParams?.user ?? "weuritz8u",
-    raw: searchParams?.raw ?? "true",
-    language: searchParams?.language ?? "true",
-    description: searchParams?.description ?? "true",
-  };
-
-  // Handle raw parameter (Redirect if true)
-  if (params.raw === "true") {
-    const queryString = new URLSearchParams(params).toString();
-    redirect(`/api/repos_raw?${queryString}`);
-  }
-
   try {
+    // Warten auf das Auflösen des Promises
+    const params = await searchParams;
+
+    const resolvedParams = {
+      user: params?.user ?? "weuritz8u",
+      raw: params?.raw ?? "true",
+      language: params?.language ?? "true",
+      description: params?.description ?? "true",
+    };
+
+    // Handle raw parameter (Redirect if true)
+    if (resolvedParams.raw === "true") {
+      const queryString = new URLSearchParams(resolvedParams).toString();
+      redirect(`/api/repos_raw?${queryString}`);
+    }
+
     // Fetch repositories for the user
-    const res = await fetch(`https://api.github.com/users/${params.user}/repos`, {
+    const res = await fetch(`https://api.github.com/users/${resolvedParams.user}/repos`, {
       next: { revalidate: 60000 }, // Cache and revalidate every 60.000 seconds
       headers: {
         Accept: "application/vnd.github.v3+json",
@@ -66,16 +73,16 @@ export default async function ReposPage({
     return (
       <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">
-          Public repositories by <span className="text-blue-600">{params.user}</span>
+          Public repositories by <span className="text-blue-600">{resolvedParams.user}</span>
         </h1>
         <table className="w-full table-auto border-collapse border border-gray-300">
           <thead>
             <tr>
               <th className="border border-gray-300 px-4 py-2 text-left">Name</th>
-              {params.language === "true" && (
+              {resolvedParams.language === "true" && (
                 <th className="border border-gray-300 px-4 py-2 text-left">Language</th>
               )}
-              {params.description === "true" && (
+              {resolvedParams.description === "true" && (
                 <th className="border border-gray-300 px-4 py-2 text-left">Description</th>
               )}
             </tr>
@@ -93,10 +100,10 @@ export default async function ReposPage({
                     {repo.name}
                   </a>
                 </td>
-                {params.language === "true" && (
+                {resolvedParams.language === "true" && (
                   <td className="border border-gray-300 px-4 py-2">{repo.language || "-"}</td>
                 )}
-                {params.description === "true" && (
+                {resolvedParams.description === "true" && (
                   <td className="border border-gray-300 px-4 py-2">{repo.description || "-"}</td>
                 )}
               </tr>
