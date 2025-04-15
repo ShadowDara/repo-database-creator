@@ -35,16 +35,23 @@ export async function GET(request: Request) {
 
   const repos: Repository[] = await apiRes.json();
 
+  const includeDesc = includeDescription === 'true';
+
   const csvLines = [
-    "Name,Language,Description",
+    includeDesc ? "Name,Language,Description" : "Name,Language",
     ...repos.map((r) => {
-      const description = includeDescription && r.description ? r.description : "-";
       const name = csvEscape(r.name);
       const lang = csvEscape(r.language || "-");
-      const desc = csvEscape(description || "-");
-      return `${name},${lang || "-"},${desc}`;
+  
+      if (includeDesc) {
+        const description = csvEscape(r.description || "-");
+        return `${name},${lang},${description}`;
+      } else {
+        return `${name},${lang}`;
+      }
     }),
   ];
+  
 
   const response = new NextResponse(csvLines.join("\n"), {
     status: 200,
