@@ -22,7 +22,8 @@ interface Repository {
 // Page component with the correct type definition for App Router pages
 export default async function ReposPage({
   searchParams,
-}: {
+}:
+{
   params: Promise<{ repodata: string }>;
   searchParams: Promise<{
     user?: string | undefined;
@@ -30,8 +31,9 @@ export default async function ReposPage({
     language?: string | undefined;
     description?: string | undefined;
   }>
-}) {
-  const query = await (searchParams).toString();
+})
+{
+  const query = await searchParams
   const { user = "weuritz8u" } = await searchParams;
   const { raw = "true" } = await searchParams;
   const { language = "true" } = await searchParams;
