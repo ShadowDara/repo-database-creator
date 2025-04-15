@@ -20,19 +20,14 @@ interface Repository {
 export default async function ReposPage({
   searchParams,
 }: {
-  searchParams: {
-    user?: string;
-    raw?: string;
-    language?: string;
-    description?: string;
-  };
+  searchParams: { user?: string; raw?: string; language?: string; description?: string };
 }) {
-  // Set default parameters
+  // Stelle sicher, dass searchParams korrekt übergeben wird.
   const params = {
-    user: searchParams.user || "weuritz8u",
-    raw: searchParams.raw || "true",
-    language: searchParams.language || "true",
-    description: searchParams.description || "true",
+    user: searchParams?.user ?? "weuritz8u",
+    raw: searchParams?.raw ?? "true",
+    language: searchParams?.language ?? "true",
+    description: searchParams?.description ?? "true",
   };
 
   // Handle raw parameter (Redirect if true)
