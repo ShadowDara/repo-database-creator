@@ -33,11 +33,14 @@ export default async function ReposPage({
   }>
 })
 {
-  const query = await searchParams
-  const { user = "weuritz8u" } = await searchParams;
-  const { raw = "true" } = await searchParams;
-  const { language = "true" } = await searchParams;
-  const { description = "true" } = await searchParams;
+  const resolvedSearchParams = await searchParams;
+
+  const { 
+    user = "weuritz8u",
+    raw = "true",
+    language = "true",
+    description = "true",
+  } = resolvedSearchParams || {};
 
   // Fetch repositories for the user
   try {
@@ -71,7 +74,7 @@ export default async function ReposPage({
       if (raw === 'true') {
         return (
           <head>
-            <meta httpEquiv="refresh" content={`0;url=repos_raw?${query}`} />
+            <meta httpEquiv="refresh" content={`0;url=repos_raw?${searchParams.toString()}`} />
           </head>
         );
       }
