@@ -24,11 +24,17 @@ export default async function ReposPage({
   searchParams,
 }: {
   params: Promise<{ repodata: string }>;
-  searchParams: Promise<{ user?: string | undefined; raw?: string | undefined; description?: string | undefined;}>
+  searchParams: Promise<{
+    user?: string | undefined;
+    raw?: string | undefined;
+    language?: string | undefined;
+    description?: string | undefined;
+  }>
 }) {
   const query = await (searchParams).toString();
   const { user = "weuritz8u" } = await searchParams;
   const { raw = "true" } = await searchParams;
+  const { language = "true" } = await searchParams;
   const { description = "true" } = await searchParams;
 
   // Fetch repositories for the user
@@ -63,7 +69,7 @@ export default async function ReposPage({
       if (raw === 'true') {
         return (
           <head>
-            <meta httpEquiv="refresh" content={`0;url=repos_raw?${searchParams}`} />
+            <meta httpEquiv="refresh" content={`0;url=repos_raw?${query}`} />
           </head>
         );
       }
@@ -101,7 +107,7 @@ export default async function ReposPage({
                           {repo.name}
                         </a>
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">{repo.language || "-"}</td>
+                      {language === "true" && <td className="border border-gray-300 px-4 py-2">{repo.language || "-"}</td>}
                       {description === "true" && <td className="border border-gray-300 px-4 py-2">{repo.description || "-"}</td>}
                     </tr>
                   ))}
