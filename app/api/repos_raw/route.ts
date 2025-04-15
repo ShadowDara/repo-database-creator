@@ -20,8 +20,16 @@ export async function GET(request: Request) {
 
   const { searchParams } = new URL(request.url);
   const user = searchParams.get("user") || "weuritz8u";
+  const raw = searchParams.get("raw") || "true";
   const includeDescription = searchParams.get("description") || "true";
   const includeLanguage = searchParams.get("language") || "true";
+
+  if (raw === "false") {
+    const redirectUrl = new URL("/api/repos", request.url);
+    redirectUrl.search = searchParams.toString();
+
+    return NextResponse.redirect(redirectUrl.toString(), 302);
+  }
 
   // GitHub API für Repositories
   const apiRes = await fetch(`https://api.github.com/users/${user}/repos`, {
