@@ -1,7 +1,10 @@
-import { use } from 'react';
-import type { Metadata } from 'next';
+// Diese Datei wird als Client-Komponente verwendet
+'use client'; // Direktive für Client-Komponente
 
-// Declare that this page is dynamic and will not be statically generated
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation'; // Import aus 'next/navigation' statt 'next/router'
+import { Metadata } from 'next';
+
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
@@ -17,44 +20,69 @@ interface Repository {
   description: string | null;
 }
 
-// Deine Page-Komponente
-export default async function ReposPage({ searchParams }: { searchParams: any }) {
-  // Warten auf die Auflösung von searchParams, falls asynchron
-  const params = await searchParams;
+export default function ReposPage({ searchParams }: { searchParams: any }) {
+  const router = useRouter();
+  const [resolvedParams, setResolvedParams] = useState<any>({});
+  const [repos, setRepos] = useState<Repository[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const resolvedParams = {
-    user: params?.user ?? 'weuritz8u',
-    raw: params?.raw ?? 'true',
-    language: params?.language ?? 'true',
-    description: params?.description ?? 'true',
-  };
+  useEffect(() => {
+    const loadRepos = async () => {
+      try {
+        // Parameter auflösen
+        const params = searchParams || {};
+        const resolved = {
+          user: params?.user ?? 'weuritz8u',
+          raw: params?.raw ?? 'false',
+          language: params?.language ?? 'true',
+          description: params?.description ?? 'true',
+        };
 
-  // Handle raw-Parameter
-  if (resolvedParams.raw === 'true') {
-    const queryString = new URLSearchParams(resolvedParams).toString();
-    redirect(`/api/repos_raw?${queryString}`);
+        setResolvedParams(resolved);
+
+        // Wenn 'raw' == true, leite weiter
+        if (resolved.raw === 'true') {
+          const queryString = new URLSearchParams(resolved).toString();
+          router.push(`/api/repos_raw?${queryString}`);
+          return; // Umleitung durchgeführt, daher zurückkehren
+        }
+
+        // Repositories abrufen
+        const res = await fetch(`https://api.github.com/users/${resolved.user}/repos`, {
+          headers: {
+            Accept: 'application/vnd.github.v3+json',
+          },
+          cache: 'force-cache',
+        });
+
+        if (!res.ok) {
+          throw new Error('User not found or API rate limit exceeded!');
+        }
+
+        const data: Repository[] = await res.json();
+        setRepos(data);
+      } catch (err: any) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadRepos();
+  }, [searchParams, router]); // Verwenden von 'useEffect' für die asynchrone Datenverarbeitung und Umleitung
+
+  if (loading) {
+    return <div>Loading...</div>;
   }
 
-  // Repositories abrufen
-  const res = await fetch(`https://api.github.com/users/${resolvedParams.user}/repos`, {
-    next: { revalidate: 60000 }, // Cache und Revalidierung alle 60.000 Sekunden
-    headers: {
-      Accept: 'application/vnd.github.v3+json',
-    },
-    cache: 'force-cache',
-  });
-
-  if (!res.ok) {
-    // Fehler beim Abrufen der Repositories
+  if (error) {
     return (
       <div className="p-6">
-        <h1 className="text-2xl font-bold text-red-600">User not found or API rate limit exceeded!</h1>
-        <p className="mt-2">Status: {res.status}</p>
+        <h1 className="text-2xl font-bold text-red-600">{error}</h1>
       </div>
     );
   }
-
-  const repos: Repository[] = await res.json();
 
   if (repos.length === 0) {
     return <p>No repositories found for this user.</p>;
