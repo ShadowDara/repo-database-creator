@@ -74,7 +74,7 @@ export default async function ReposPage({
       if (raw === 'true') {
         return (
           <head>
-            <meta httpEquiv="refresh" content={`0;url=repos_raw?${searchParams.toString()}`} />
+            <meta httpEquiv="refresh" content={`0;url=repos_raw?user=${user}&raw=${raw}&language=${language}&description=${description}`} />
           </head>
         );
       }
