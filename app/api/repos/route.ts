@@ -25,9 +25,10 @@ export async function GET(request: Request) {
   const includeLanguage = searchParams.get("language") || "true";
   const show_user = searchParams.get("show_user") || "false";
   const show_link = searchParams.get("link") || "false";
+  const show_id = searchParams.get("id") || "false";
 
   if (raw === "false") {
-    const redirectUrl = new URL("/api/repos", request.url);
+    const redirectUrl = new URL("/api/repos_html", request.url);
     redirectUrl.search = searchParams.toString();
 
     return NextResponse.redirect(redirectUrl.toString(), 302);
@@ -46,6 +47,7 @@ export async function GET(request: Request) {
 
   const repos: Repository[] = await apiRes.json();
 
+  const includeId = show_id === 'true';
   const includeUser = show_user === 'true';
   const includeLang = includeLanguage === 'true';
   const includeDesc = includeDescription === 'true';
@@ -54,6 +56,7 @@ export async function GET(request: Request) {
   const csvLines = [
     // Dynamischer Header
     [
+      ...(includeId ? ["id"] : []),
       "Name",
       ...(includeUser ? ["Username"] : []),
       ...(includeLang ? ["Language"] : []),
@@ -69,6 +72,7 @@ export async function GET(request: Request) {
       const linkc = csvEscape(r.html_url);
   
       return [
+        ...(includeId ? [r.id] : []),
         name,
         ...(includeLang ? [lang] : []),
         ...(includeUser ? [user] : []),

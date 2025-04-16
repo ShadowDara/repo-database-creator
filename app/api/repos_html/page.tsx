@@ -1,5 +1,7 @@
 // app/repos/page.tsx
 
+// Repair this Page fully!
+
 import type { Metadata } from "next"
 
 // Declare that this page is dynamic and will not be statically generated
@@ -74,7 +76,7 @@ export default async function ReposPage({
       if (raw === 'true') {
         return (
           <head>
-            <meta httpEquiv="refresh" content={`0;url=repos_raw?user=${user}&raw=${raw}&language=${language}&description=${description}`} />
+            <meta httpEquiv="refresh" content={`0;url=repos?user=${user}&raw=${raw}&language=${language}&description=${description}`} />
           </head>
         );
       }

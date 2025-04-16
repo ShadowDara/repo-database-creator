@@ -3,7 +3,7 @@
 <!--
 
 Max Table:
-api/repos?user=shadowdara&raw=true&show_user=true&language=true&description=true&link=true
+/api/repos?id=true&user=shadowdara&raw=true&show_user=true&language=true&description=true&link=true
 
 -->
 # Repository Database Creator
@@ -29,7 +29,13 @@ value when the argument is not given!
         <th>Variable Type</th>
     </tr>
     <tr>
-        <td><code>&user=weuritz8u</code></td>
+        <td><code>&id=false</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&user=shadowdara</code></td>
         <td>x</td>
         <td>x</td>
         <td>String</td>
