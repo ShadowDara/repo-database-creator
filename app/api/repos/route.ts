@@ -88,7 +88,7 @@ export async function GET(request: Request) {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
-      //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
     },
   });
 
