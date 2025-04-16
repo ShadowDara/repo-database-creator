@@ -3,7 +3,7 @@
 <!--
 
 Max Table:
-?user=shadowdara
+api/repos?user=shadowdara&raw=true&show_user=true&language=true&description=true&link=true
 
 -->
 # Repository Database Creator
