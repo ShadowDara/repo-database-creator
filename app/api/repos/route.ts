@@ -26,6 +26,7 @@ export async function GET(request: Request) {
   const show_user = searchParams.get("show_user") || "false";
   const show_link = searchParams.get("link") || "false";
   const show_id = searchParams.get("id") || "false";
+  const show_name = searchParams.get("show_name") || "true";
 
   if (raw === "false") {
     const redirectUrl = new URL("/api/repos_html", request.url);
@@ -48,6 +49,7 @@ export async function GET(request: Request) {
   const repos: Repository[] = await apiRes.json();
 
   const includeId = show_id === 'true';
+  const includeName = show_id === "true";
   const includeUser = show_user === 'true';
   const includeLang = includeLanguage === 'true';
   const includeDesc = includeDescription === 'true';
@@ -56,8 +58,8 @@ export async function GET(request: Request) {
   const csvLines = [
     // Dynamischer Header
     [
-      ...(includeId ? ["id"] : []),
-      "Name",
+      ...(includeId ? ["ID"] : []),
+      ...(includeName ? ["Name"] : []),
       ...(includeUser ? ["Username"] : []),
       ...(includeLang ? ["Language"] : []),
       ...(includeDesc ? ["Description"] : []),
@@ -73,7 +75,7 @@ export async function GET(request: Request) {
   
       return [
         ...(includeId ? [r.id] : []),
-        name,
+        ...(includeName ? [name] : []),
         ...(includeLang ? [lang] : []),
         ...(includeUser ? [user] : []),
         ...(includeDesc ? [desc] : []),
@@ -81,14 +83,12 @@ export async function GET(request: Request) {
       ].join(",");
     }),
   ];
-  
-  
 
   const response = new NextResponse(csvLines.join("\n"), {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
-      "Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
     },
   });
 

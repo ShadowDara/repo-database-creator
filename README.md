@@ -30,12 +30,6 @@ value when the argument is not given!
         <th>Variable Type</th>
     </tr>
     <tr>
-        <td><code>&id=false</code></td>
-        <td>x</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
         <td><code>&user=shadowdara</code></td>
         <td>x</td>
         <td>x</td>
@@ -44,6 +38,18 @@ value when the argument is not given!
     <tr>
         <td><code>&raw=true</code></td>
         <td>to display the output as an raw csv file, <i>(redirecting to api/repos_raw)</i></td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&id=false</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>show_name=true</code></td>
+        <td>x</td>
         <td>x</td>
         <td>Boolean</td>
     </tr>
