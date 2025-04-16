@@ -55,8 +55,7 @@ export async function GET(request: Request) {
   const includeDesc = includeDescription === 'true';
   const includeLink = show_link === 'true';
   
-  const csvLines = [
-    // Dynamischer Header
+  const csvLines = [ // Dynamischer Header
     [
       ...(includeId ? ["ID"] : []),
       ...(includeName ? ["Name"] : []),
@@ -89,6 +88,7 @@ export async function GET(request: Request) {
     headers: {
       "Content-Type": "text/plain",
       //"Content-Disposition": `attachment; filename="${user}_repos.csv"`,
+      // to download the table as csv file!
     },
   });
 
