@@ -75,8 +75,8 @@ export async function GET(request: Request) {
       return [
         ...(includeId ? [r.id] : []),
         ...(includeName ? [name] : []),
-        ...(includeLang ? [lang] : []),
         ...(includeUser ? [user] : []),
+        ...(includeLang ? [lang] : []),
         ...(includeDesc ? [desc] : []),
         ...(includeLink ? [linkc] : []),
       ].join(",");
