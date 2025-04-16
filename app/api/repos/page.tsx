@@ -36,7 +36,7 @@ export default async function ReposPage({
   const resolvedSearchParams = await searchParams;
 
   const { 
-    user = "weuritz8u",
+    user = "shadowdara",
     raw = "true",
     language = "true",
     description = "true",

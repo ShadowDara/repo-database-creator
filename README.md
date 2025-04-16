@@ -1,5 +1,11 @@
 <!-- written by Shadowdara -->
 
+<!--
+
+Max Table:
+?user=shadowdara
+
+-->
 # Repository Database Creator
 
 ***Check it out [here](https://repo-database-creator.vercel.app/api/repos?user=weuritz8u&raw=false) for User `weuritz8u`***
@@ -35,6 +41,12 @@ value when the argument is not given!
         <td>Boolean</td>
     </tr>
     <tr>
+        <td><code>&show_user=false</code></td>
+        <td>to display the Repository Owner Name</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
         <td><code>&language=true</code></td>
         <td>to display the Repository Language</td>
         <td>x</td>
@@ -43,6 +55,12 @@ value when the argument is not given!
     <tr>
         <td><code>&description=true</code></td>
         <td>to display the Repository Description</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&link=true</code></td>
+        <td>to display the Repository link</td>
         <td>x</td>
         <td>Boolean</td>
     </tr>
