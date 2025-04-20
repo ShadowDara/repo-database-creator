@@ -1,5 +1,12 @@
 <!-- written by Shadowdara -->
 
+<!--
+
+Max Table:
+/api/repos?id=true&user=shadowdara&raw=true&show_user=true&language=true&description=true&link=true
+
+-->
+
 # Repository Database Creator
 
 ***Check it out [here](https://repo-database-creator.vercel.app/api/repos?user=weuritz8u&raw=false) for User `weuritz8u`***
@@ -10,7 +17,9 @@
 
 - we use caching to prevent server usage *(16,6 hours)*
 
-## Arguments
+## Raw Repopository CSV Table
+
+### Arguments
 
 The content after the `=` in the table is the standard
 value when the argument is not given!
@@ -23,14 +32,32 @@ value when the argument is not given!
         <th>Variable Type</th>
     </tr>
     <tr>
-        <td><code>&user=weuritz8u</code></td>
-        <td>x</td>
+        <td><code>&user=shadowdara</code></td>
+        <td>the Users Github Username</td>
         <td>x</td>
         <td>String</td>
     </tr>
     <tr>
         <td><code>&raw=true</code></td>
         <td>to display the output as an raw csv file, <i>(redirecting to api/repos_raw)</i></td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&id=false</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>show_name=true</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&show_user=false</code></td>
+        <td>to display the Repository Owner Name</td>
         <td>x</td>
         <td>Boolean</td>
     </tr>
@@ -46,11 +73,17 @@ value when the argument is not given!
         <td>x</td>
         <td>Boolean</td>
     </tr>
+    <tr>
+        <td><code>&link=true</code></td>
+        <td>to display the Repository link</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
 </table>
 
 ## Repo Count SVG
 
-[https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+`[https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)`
 
 ## Dev open
 
