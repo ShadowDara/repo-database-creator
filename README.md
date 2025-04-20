@@ -79,9 +79,9 @@ value when the argument is not given!
     </tr>
 </table>
 
-## Other
+## Repo Count SVG
 
-CORS are activated for the raw data page! *soon*
+`[https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)`
 
 ## Dev open
 
