@@ -91,13 +91,11 @@ A SVG Picture which shows the public Repositorys of a User
     <tr>
         <th>Argument</th>
         <th>Description</th>
-        <th>Showcase</th>
         <th>Variable Type</th>
     </tr>
     <tr>
         <td><code>&user=shadowdara</code></td>
         <td>the Users Github Username</td>
-        <td>x</td>
         <td>String</td>
     </tr>
 </table>
