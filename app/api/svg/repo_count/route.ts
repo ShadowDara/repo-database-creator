@@ -2,24 +2,24 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function GET(req: NextRequest) {
-    const { searchParams } = new URL(req.url)
-    const user = searchParams.get('user') || "shadowdara";
+  const { searchParams } = new URL(req.url)
+  const user = searchParams.get('user') || "shadowdara";
 
-    try {
-        // GitHub API für Repositories
-        const response = await fetch(`https://api.github.com/users/${user}`, {
-            next: { revalidate: 60000 }, // Cache und Revalidate alle 60.000 Sekunden
-            cache: "force-cache",
-        });
+  try {
+    // GitHub API für Repositories
+    const response = await fetch(`https://api.github.com/users/${user}`, {
+      next: { revalidate: 60000 }, // Cache und Revalidate alle 60.000 Sekunden
+      cache: "force-cache",
+    });
 
-        if (!response.ok) {
-            return new Response('GitHub user not found', { status: response.status })
-        }
+    if (!response.ok) {
+      return new Response('GitHub user not found', { status: response.status })
+    }
 
-        const data = await response.json()
-        const repoCount = data.public_repos
+    const data = await response.json()
+    const repoCount = data.public_repos
 
-        const svg = `
+    const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
@@ -48,13 +48,13 @@ export async function GET(req: NextRequest) {
       </svg>
     `
 
-        return new Response(svg, {
-            headers: {
-                'Content-Type': 'image/svg+xml',
-                'Cache-Control': 'no-cache',
-            },
-        })
-    } catch (err) {
-        return new Response('Something went wrong', { status: 500 })
-    }
+    return new Response(svg, {
+      headers: {
+        'Content-Type': 'image/svg+xml',
+        'Cache-Control': 'no-cache',
+      },
+    })
+  } catch (err) {
+    return new Response('Something went wrong', { status: 500 })
+  }
 }

@@ -46,7 +46,7 @@ export async function GET(request: Request) {
   const includeLang = includeLanguage === 'true';
   const includeDesc = includeDescription === 'true';
   const includeLink = show_link === 'true';
-  
+
   const csvLines = [ // Dynamischer Header
     [
       ...(includeId ? ["ID"] : []),
@@ -56,14 +56,14 @@ export async function GET(request: Request) {
       ...(includeDesc ? ["Description"] : []),
       ...(includeLink ? ["Link"] : [])
     ].join(","),
-  
+
     // Repos
     ...repos.map((r) => {
       const name = csvEscape(r.name);
       const lang = csvEscape(r.language || "-");
       const desc = csvEscape(r.description || "-");
       const linkc = csvEscape(r.html_url);
-  
+
       return [
         ...(includeId ? [r.id] : []),
         ...(includeName ? [name] : []),
