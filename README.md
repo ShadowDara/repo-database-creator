@@ -83,7 +83,30 @@ value when the argument is not given!
 
 ## Repo Count SVG
 
-`[https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)`
+A SVG Picture which shows the public Repositorys of a User
+
+### Arguments
+
+<table>
+    <tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Showcase</th>
+        <th>Variable Type</th>
+    </tr>
+    <tr>
+        <td><code>&user=shadowdara</code></td>
+        <td>the Users Github Username</td>
+        <td>x</td>
+        <td>String</td>
+    </tr>
+</table>
+
+```
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+```
+
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
 ## Dev open
 
