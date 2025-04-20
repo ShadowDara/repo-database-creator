@@ -49,8 +49,11 @@ value when the argument is not given!
 </table>
 
 ## Repo Count SVG
-
-[https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+A SVG Picture which shows the public Repositorys of a User
+```
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+```
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
 ## Dev open
 
