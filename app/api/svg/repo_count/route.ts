@@ -1,7 +1,7 @@
 // app/api/svg/repo_count/route.ts
 
-import { getRepoCount } from '@/lib/github'
-import { loadThemes } from '@/lib/themes'
+import { getRepoCount } from '../../../lib/github'
+import { loadThemes } from '../../../lib/themes'
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
