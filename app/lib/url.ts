@@ -6,9 +6,10 @@ export function getSearchParams(request: Request) {
       user: searchParams.get("user") || "shadowdara",
       includeDescription: searchParams.get("description") || "true",
       includeLanguage: searchParams.get("language") || "true",
+      show_name: searchParams.get("show_name") || "true",
       show_user: searchParams.get("show_user") || "false",
       show_link: searchParams.get("link") || "false",
       show_id: searchParams.get("id") || "false",
-      show_name: searchParams.get("show_name") || "true",
+      theme: searchParams.get("theme") || "default",
     };
 }
