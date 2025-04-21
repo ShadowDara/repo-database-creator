@@ -1,23 +1,18 @@
-// app/api/github/route.ts
-import { NextRequest, NextResponse } from 'next/server'
+// app/api/svg/repo_count/route.ts
 
-export async function GET(req: NextRequest) {
+import { getRepoCount } from '@/lib/github'
+import { loadThemes } from '@/lib/themes'
+
+export async function GET(req: Request) {
   const { searchParams } = new URL(req.url)
-  const user = searchParams.get('user') || "shadowdara";
+  const user = searchParams.get('user') ?? 'defaultUser'
+  const themeName = searchParams.get('theme') ?? 'default'
 
   try {
-    // GitHub API für Repositories
-    const response = await fetch(`https://api.github.com/users/${user}`, {
-      next: { revalidate: 60000 }, // Cache und Revalidate alle 60.000 Sekunden
-      cache: "force-cache",
-    });
-
-    if (!response.ok) {
-      return new Response('GitHub user not found', { status: response.status })
-    }
-
-    const data = await response.json()
-    const repoCount = data.public_repos
+    // Lade das Theme und GitHub Repo Count
+    const themes = await loadThemes()
+    const theme = themes[themeName] ?? themes['default']
+    const repoCount = await getRepoCount(user)
 
     const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">

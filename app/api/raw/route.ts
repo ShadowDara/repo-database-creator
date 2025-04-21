@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import themes from '@/themes/themes.json'
 
 interface Repository {
   id: number;
@@ -30,7 +31,7 @@ export async function GET(request: Request) {
   // GitHub API für Repositories
   const apiRes = await fetch(`https://api.github.com/users/${user}/repos`, {
     headers: { Accept: "application/vnd.github.v3+json" },
-    next: { revalidate: 60000 }, // Cache und Revalidate alle 60.000 Sekunden
+    next: { revalidate: 86400 },
     cache: "force-cache",
   });
 
