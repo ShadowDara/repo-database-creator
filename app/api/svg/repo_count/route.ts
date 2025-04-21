@@ -16,7 +16,6 @@ export async function GET(request: Request) {
   } = getSearchParams(request);
 
   try {
-    // Lade das Theme und GitHub Repo Count
     const themes = await loadThemes()
 
     const theme = themes[themeName]
