@@ -1,5 +1,5 @@
 // lib/url.ts
-import { settings } from '../lib/js/settings.js';
+import { settings } from '../lib/js/settings';
 
 export function getSearchParams(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -12,7 +12,7 @@ export function getSearchParams(request: Request) {
     show_user: searchParams.get("show_user") || "false",
     show_link: searchParams.get("link") || "false",
     show_id: searchParams.get("id") || "false",
-    themeName: searchParams.get("theme") || "daras-green",
+    themeName: searchParams.get("theme") || "daras_green",
   };
 }
 

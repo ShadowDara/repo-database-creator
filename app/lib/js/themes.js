@@ -1,15 +1,15 @@
 // app/lib/config.js
 
 export const themes = {
-    'default': {
+    default: {
         color: '',
         bg_color: '',
     },
-    'midnight-purple': {
+    midnight_purple: {
         color: '',
         bg_color: '',
     },
-    'daras-green': {
+    daras_green: {
         color: 'ffffff',
         bg_color: '000000',
     },
