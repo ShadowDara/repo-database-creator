@@ -8,7 +8,7 @@
         "bg_color": ""
     },
     "daras-green": {
-        "color": "#ff0000",
+        "color": "ff0000",
         "bg_color": "f000000"
     }
 }
