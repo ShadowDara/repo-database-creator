@@ -1,7 +1,7 @@
 // app/lib/config.js
 
 export const themes = {
-    default: {
+    'default': {
         color: '',
         bg_color: '',
     },
