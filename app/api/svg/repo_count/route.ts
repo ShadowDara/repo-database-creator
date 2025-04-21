@@ -1,7 +1,6 @@
 // app/api/svg/repo_count/route.ts
 
-import { getSearchParams } from '../../../lib/url';
-import { getRepoCount } from '../../../lib/github'
+import { getSearchParams, getRepoCount } from '../../../lib/url';
 import { loadThemes } from '../../../lib/themes'
 
 

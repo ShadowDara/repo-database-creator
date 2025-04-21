@@ -1,4 +1,9 @@
 // lib/url.ts
+import { promises as fs } from 'fs'
+import path from 'path'
+
+const themesPath = path.join(process.cwd(), 'app/lib/settings.json')
+
 export function getSearchParams(request: Request) {
     const { searchParams } = new URL(request.url);
   
@@ -12,4 +17,18 @@ export function getSearchParams(request: Request) {
       show_id: searchParams.get("id") || "false",
       themeName: searchParams.get("theme") || "default",
     };
+}
+
+export async function getRepoCount(user: string): Promise<number | null> {
+  const response = await fetch(`https://api.github.com/users/${user}`, {
+    next: { revalidate: 1 }, // in seconds
+    cache: "force-cache",
+  })
+
+  if (!response.ok) {
+    throw new Error('GitHub user not found')
+  }
+
+  const data = await response.json()
+  return data.public_repos
 }
