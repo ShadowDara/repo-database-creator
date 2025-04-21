@@ -1,6 +1,6 @@
 // app/lib/loadThemes.ts
 
-import { themes } from '../lib/themes.js';
+import { themes } from '../lib/js/themes.js';
 
 export function loadThemes() {
   return themes;

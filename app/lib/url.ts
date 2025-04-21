@@ -1,5 +1,5 @@
 // lib/url.ts
-import { settings } from '../lib/settings.js';
+import { settings } from '../lib/js/settings.js';
 
 export function getSearchParams(request: Request) {
   const { searchParams } = new URL(request.url);
