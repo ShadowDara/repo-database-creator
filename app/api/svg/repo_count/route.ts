@@ -20,7 +20,7 @@ export async function GET(request: Request) {
   try {
     // Lade das Theme und GitHub Repo Count
     const themes = await loadThemes()
-    //const theme = themes[themeName] ?? themes["default"]
+    const theme = themes[themeName] ?? themes["daras-green"]
     const repoCount = await getRepoCount(user)
 
     const svg = `
@@ -37,7 +37,7 @@ export async function GET(request: Request) {
         <rect width="320" height="80" rx="16" fill="url(#bgGradient)" filter="url(#shadow)" />
         
         <g transform="translate(24, 50)">
-          <text x="0" y="-15" font-family="Segoe UI, sans-serif" font-size="20" fill="#ffffff" font-weight="bold">
+          <text x="0" y="-15" font-family="Segoe UI, sans-serif" font-size="20" fill="${theme.color}" font-weight="bold">
             ${user}
           </text>
           <text x="0" y="12" font-family="Segoe UI, sans-serif" font-size="14" fill="#c9d1d9">
