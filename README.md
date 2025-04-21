@@ -17,7 +17,9 @@ Max Table:
 
 - we use caching to prevent server usage *(16,6 hours)*
 
-## Arguments
+## Raw Repopository CSV Table
+
+### Arguments
 
 The content after the `=` in the table is the standard
 value when the argument is not given!
@@ -79,9 +81,110 @@ value when the argument is not given!
     </tr>
 </table>
 
+
 ## Repo Count SVG
 
-`[https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)`
+A SVG Picture which shows the public Repositorys of a User
+
+### Arguments
+
+<table>
+    <tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Variable Type</th>
+    </tr>
+    <tr>
+        <td><code>&user=shadowdara</code></td>
+        <td>the Users Github Username</td>
+        <td>String</td>
+    </tr>
+</table>
+
+```
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+```
+
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+
+
+## Themes
+
+### Default
+
+### Midnight Purple
+
+### Daras Green
+
+### Daras Pink
+
+## All Arguments
+
+<table>
+<tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Variable Type</th>
+        <th>Available in</th>
+        <th>Default</th>
+    </tr>
+    <tr>
+        <td><code>user</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>String</td>
+        <td>shadowdara</td>
+    </tr>
+    <tr>
+        <td><code>description</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><code>language</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><code>show_name</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><code>show_user</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><code>link</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><code>id</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><code>theme</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>String</td>
+        <td>daras_green</td>
+    </tr>
+</table>
 
 ## Dev open
 
