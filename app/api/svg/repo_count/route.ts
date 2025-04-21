@@ -19,7 +19,7 @@ export async function GET(request: Request) {
   try {
     // Lade das Theme und GitHub Repo Count
     const themes = await loadThemes()
-    const theme = themes[themeName] ?? themes['default']
+    const theme = themes[themeName] ?? themes["default"]
     const repoCount = await getRepoCount(user)
 
     const svg = `
