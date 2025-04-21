@@ -1,12 +1,20 @@
 // app/api/svg/repo_count/route.ts
 
+import { getSearchParams } from '../../../lib/url';
 import { getRepoCount } from '../../../lib/github'
 import { loadThemes } from '../../../lib/themes'
 
 export async function GET(req: Request) {
-  const { searchParams } = new URL(req.url)
-  const user = searchParams.get('user') ?? 'defaultUser'
-  const themeName = searchParams.get('theme') ?? 'default'
+  const {
+    user,
+    includeDescription,
+    includeLanguage,
+    show_user,
+    show_link,
+    show_id,
+    show_name,
+  } = getSearchParams(Request);
+
 
   try {
     // Lade das Theme und GitHub Repo Count
