@@ -20,7 +20,7 @@ export async function getRepoCount(user: string): Promise<number | null> {
   const cacheTime = settings['cacheTime'];
 
   const response = await fetch(`https://api.github.com/users/${user}`, {
-    next: { revalidate: cacheTime }, // in Sekunden
+    next: { revalidate: cacheTime },
     cache: "force-cache",
   });
 
