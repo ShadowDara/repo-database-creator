@@ -13,4 +13,8 @@ export const themes = {
         color: 'ffffff',
         bg_color: '000000',
     },
+    daras_pink: {
+        color: '',
+        bg_color: '',
+    }
 };

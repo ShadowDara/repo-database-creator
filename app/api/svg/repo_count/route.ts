@@ -6,12 +6,6 @@ import { loadThemes, ThemeMap } from '../../../lib/themes'
 export async function GET(request: Request) {
   const {
     user,
-    includeDescription,
-    includeLanguage,
-    show_user,
-    show_link,
-    show_id,
-    show_name,
     themeName,
   } = getSearchParams(request);
 
