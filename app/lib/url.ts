@@ -17,7 +17,7 @@ export function getSearchParams(request: Request) {
 }
 
 export async function getRepoCount(user: string): Promise<number | null> {
-  const cacheTime = settings['cache-time'];
+  const cacheTime = settings['cacheTime'];
 
   const response = await fetch(`https://api.github.com/users/${user}`, {
     next: { revalidate: cacheTime }, // in Sekunden
