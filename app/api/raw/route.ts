@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import themes from '@/themes/themes.json'
 
 interface Repository {
   id: number;
