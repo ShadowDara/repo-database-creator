@@ -33,7 +33,7 @@ value when the argument is not given!
     </tr>
     <tr>
         <td><code>&user=shadowdara</code></td>
-        <td>the Users Github Username</td>
+        <td>x</td>
         <td>x</td>
         <td>String</td>
     </tr>
@@ -81,6 +81,7 @@ value when the argument is not given!
     </tr>
 </table>
 
+
 ## Repo Count SVG
 
 A SVG Picture which shows the public Repositorys of a User
@@ -106,10 +107,77 @@ A SVG Picture which shows the public Repositorys of a User
 
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
+
 ## Dev open
 
 <a href="https://repo-database-creator.vercel.app/api/repos_raw">Main Page</a>
 <a href="https://repo-database-creator-git-test-deployment-shadowdaras-projects.vercel.app/api/repos_raw">Test Deployment</a>
+
+
+## All Arguments:
+
+<table>
+    <tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Showcase</th>
+        <th>Variable Type</th>
+    </tr>
+    <tr>
+        <td><code>&user=shadowdara</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>String</td>
+    </tr>
+    <tr>
+        <td><code>&id=false</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&description=true</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&language=true</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>show_name=true</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&show_user=false</code></td>
+        <td>to display the Repository Owner Name</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&language=true</code></td>
+        <td>to display the Repository Language</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&description=true</code></td>
+        <td>to display the Repository Description</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+    <tr>
+        <td><code>&link=true</code></td>
+        <td>to display the Repository link</td>
+        <td>x</td>
+        <td>Boolean</td>
+    </tr>
+</table>
 
 ---
 
