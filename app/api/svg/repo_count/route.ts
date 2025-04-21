@@ -13,7 +13,7 @@ export async function GET(req: Request) {
     show_link,
     show_id,
     show_name,
-  } = getSearchParams(Request);
+  } = getSearchParams(request);
 
 
   try {
