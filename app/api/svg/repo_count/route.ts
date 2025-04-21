@@ -20,7 +20,7 @@ export async function GET(request: Request) {
     // Lade das Theme und GitHub Repo Count
     const themes = await loadThemes()
 
-    const theme = themes[themeName] ?? themes["daras-green"]
+    const theme = themes[themeName]
     
     const repoCount = await getRepoCount(user)
 
