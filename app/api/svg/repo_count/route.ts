@@ -3,7 +3,6 @@
 import { getSearchParams, getRepoCount } from '../../../lib/url';
 import { loadThemes } from '../../../lib/themes'
 
-
 export async function GET(request: Request) {
   const {
     user,
