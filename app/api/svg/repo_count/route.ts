@@ -4,7 +4,7 @@ import { getSearchParams } from '../../../lib/url';
 import { getRepoCount } from '../../../lib/github'
 import { loadThemes } from '../../../lib/themes'
 
-export async function GET(req: Request) {
+export async function GET(request: Request) {
   const {
     user,
     includeDescription,

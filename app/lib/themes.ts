@@ -1,8 +1,7 @@
-// lib/themes.ts
 import { promises as fs } from 'fs'
 import path from 'path'
 
-const themesPath = path.join(process.cwd(), '../../../public/themes.json')
+const themesPath = path.join(process.cwd(), 'lib/themes/themes.json') // <-- neue Pfadangabe
 
 export async function loadThemes() {
   const file = await fs.readFile(themesPath, 'utf-8')
