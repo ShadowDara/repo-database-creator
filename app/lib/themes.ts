@@ -1,4 +1,4 @@
-// app/lib/loadThemes.ts
+// app/lib/themes.ts
 
 import { themes } from '../lib/js/themes';
 

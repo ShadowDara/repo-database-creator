@@ -1,4 +1,4 @@
-// app/lib/config.js
+// app/lib/js/config.js
 
 export const themes = {
     default: {
