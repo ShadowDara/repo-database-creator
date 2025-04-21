@@ -18,7 +18,7 @@ export async function GET(request: Request) {
   try {
     const themes = await loadThemes()
 
-    const theme = themes[themeName];
+    const theme = (themes as ThemeMap)[themeName];
     
     const repoCount = await getRepoCount(user)
 
