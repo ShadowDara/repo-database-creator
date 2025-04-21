@@ -19,11 +19,10 @@ export async function GET(request: Request) {
   try {
     // Lade das Theme und GitHub Repo Count
     const themes = await loadThemes()
-    console.log('loaded themes:', themes)
+
     const theme = themes[themeName] ?? themes["daras-green"]
+    
     const repoCount = await getRepoCount(user)
-    console.log("themeName (raw):", themeName);
-    console.log("available themes:", Object.keys(themes));
 
     const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
