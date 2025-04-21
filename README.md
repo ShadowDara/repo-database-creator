@@ -15,7 +15,7 @@ Max Table:
 
 ## Infos
 
-- we use caching to prevent server usage *(16,6 hours)*
+- we use caching to prevent server usage *(24 hours)*
 
 ## Raw Repopository CSV Table
 
