@@ -27,7 +27,6 @@ export async function getRepoCount(user: string): Promise<number | null> {
     next: { revalidate: json['cache-time'] }, // in seconds
     cache: "force-cache",
   })
-  console.log(json['cache-time'])
 
   if (!response.ok) {
     throw new Error('GitHub user not found')
