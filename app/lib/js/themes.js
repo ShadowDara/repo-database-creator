@@ -6,8 +6,8 @@ export const themes = {
         bg_color: '',
     },
     midnight_purple: {
-        color: '',
-        bg_color: '',
+        color: '9745f5',
+        bg_color: '000000',
     },
     daras_green: {
         color: 'ffffff',
