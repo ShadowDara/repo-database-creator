@@ -10,6 +10,6 @@ export function getSearchParams(request: Request) {
       show_user: searchParams.get("show_user") || "false",
       show_link: searchParams.get("link") || "false",
       show_id: searchParams.get("id") || "false",
-      theme: searchParams.get("theme") || "default",
+      themeName: searchParams.get("theme") || "default",
     };
 }
