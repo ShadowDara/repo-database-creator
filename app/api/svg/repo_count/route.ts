@@ -11,11 +11,12 @@ export async function GET(request: Request) {
 
   try {
     const themes = await loadThemes()
+    console.error("1")
 
-    //const theme = (themes as ThemeMap)[themeName];
-    
+    const theme = (themes as ThemeMap)[themeName];
+    console.error("2")
     const repoCount = await getRepoCount(user)
-
+    console.error("3")
     const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -44,6 +45,7 @@ export async function GET(request: Request) {
         </g>
       </svg>
     `
+    console.error("4")
 
     return new Response(svg, {
       headers: {
