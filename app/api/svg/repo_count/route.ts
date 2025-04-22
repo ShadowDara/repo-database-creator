@@ -12,9 +12,17 @@ export async function GET(request: Request) {
   try {
     const themes = await loadThemes();
     const theme = (themes as ThemeMap)[themeName];
-    console.warn("2")
+
+    if (!user || typeof user !== "string") {
+      return new Response("Missing or invalid 'user' parameter", { status: 400 });
+    }
+
     const repoCount = await getRepoCount(user);
-    console.warn("4")
+
+    if (repoCount === null) {
+      return new Response("Could not retrieve repo count", { status: 404 });
+    }    
+
     const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
         <defs>
