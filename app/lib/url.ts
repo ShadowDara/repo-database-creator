@@ -1,6 +1,5 @@
 // lib/url.ts
 
-import { NextResponse } from "next/server";
 import { settings } from '../lib/js/settings';
 
 export function getSearchParams(request: Request) {
@@ -49,7 +48,7 @@ export async function getRepoCount(user: string): Promise<number | null> {
       return null;
     }
 
-    console.log(`Cache Miss for user: ${user}, fetched from GitHub API`);
+    console.warn(`Cache Miss for user: ${user}, fetched from GitHub API`);
     repoCache.set(user, { value: data.public_repos, timestamp: now });
 
     return data.public_repos;

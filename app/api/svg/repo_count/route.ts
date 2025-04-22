@@ -10,7 +10,7 @@ export async function GET(request: Request) {
   } = getSearchParams(request);
 
   try {
-    const themes = loadThemes();
+    const themes = await loadThemes();
 
     if (!themes || typeof themes !== 'object') {
       console.error("Themes not loaded or invalid:", themes);
@@ -27,7 +27,7 @@ export async function GET(request: Request) {
 
     if (repoCount === null) {
       return new Response("Could not retrieve repo count", { status: 404 });
-    }    
+    }
 
     const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
@@ -57,8 +57,6 @@ export async function GET(request: Request) {
         </g>
       </svg>
     `;
-
-    console.log("XD");
 
     return new Response(svg, {
       headers: {

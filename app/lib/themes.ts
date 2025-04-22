@@ -2,7 +2,7 @@
 
 import { themes } from '../lib/js/themes';
 
-export function loadThemes() {
+export async function loadThemes() {
   return themes;
 }
 
