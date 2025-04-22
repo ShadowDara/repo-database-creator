@@ -18,8 +18,17 @@ export function getSearchParams(request: Request) {
   };
 }
 
+const repoCache = new Map<string, { value: number; timestamp: number }>();
+
 export async function getRepoCount(user: string): Promise<number | null> {
   const cacheTime = settings['cacheTime'];
+  const now = Date.now();
+
+  const cached = repoCache.get(user);
+  if (cached && now - cached.timestamp < cacheTime * 1000) {
+    console.log('Cache Hit for user:', user);
+    return cached.value;
+  }
 
   const response = await fetch(`https://api.github.com/users/${user}`, {
     next: { revalidate: cacheTime },
@@ -31,5 +40,8 @@ export async function getRepoCount(user: string): Promise<number | null> {
   }
 
   const data = await response.json();
+  repoCache.set(user, { value: data.public_repos, timestamp: now });
+
+  console.warn('Cache Miss, fetched from GitHub API');
   return data.public_repos;
 }
