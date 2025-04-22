@@ -18,8 +18,17 @@ export function getSearchParams(request: Request) {
   };
 }
 
+const repoCache = new Map<string, { value: number; timestamp: number }>();
+
 export async function getRepoCount(user: string): Promise<number | null> {
   const cacheTime = settings['cacheTime'];
+  const now = Date.now();
+
+  const cached = repoCache.get(user);
+  if (cached && now - cached.timestamp < cacheTime * 1000) {
+    console.log(`Cache Hit for user: ${user}`);
+    return cached.value;
+  }
 
   try {
     const response = await fetch(`https://api.github.com/users/${user}`, {
@@ -28,23 +37,25 @@ export async function getRepoCount(user: string): Promise<number | null> {
     });
 
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error(`GitHub API error for user "${user}": ${response.status} - ${errorText}`);
+      const text = await response.text();
+      console.error(`GitHub API error (${response.status}): ${text}`);
       return null;
     }
 
     const data = await response.json();
 
-    if (!data || typeof data.public_repos !== 'number') {
-      console.error(`Unexpected response shape for user "${user}":`, data);
+    if (!data || typeof data.public_repos !== "number") {
+      console.error("Invalid GitHub response:", data);
       return null;
     }
 
-    console.log(`Cache ${response.headers.get("x-vercel-cache") ?? "status unknown"} for user: ${user}`);
+    console.log(`Cache Miss for user: ${user}, fetched from GitHub API`);
+    repoCache.set(user, { value: data.public_repos, timestamp: now });
+
     return data.public_repos;
 
-  } catch (err) {
-    console.error(`Unexpected error while fetching repo count for "${user}":`, err);
+  } catch (error) {
+    console.error("Error fetching GitHub data:", error);
     return null;
   }
 }
