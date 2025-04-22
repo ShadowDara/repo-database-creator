@@ -61,6 +61,7 @@ export async function GET(request: Request) {
       },
     })
   } catch (err) {
+    console.error("Error generating SVG:", err);
     return new Response('Something went wrong', { status: 500 })
   }
 }
