@@ -27,7 +27,7 @@ export async function GET(request: Request) {
             <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00000055"/>
           </filter>
         </defs>
-        <rect width="320" height="80" rx="16" fill="ffffff" filter="url(#shadow)" />
+        <rect width="320" height="80" rx="16" fill="url(#bgGradient)" filter="url(#shadow)" />
         
         <g transform="translate(24, 50)">
           <text x="0" y="-15" font-family="Segoe UI, sans-serif" font-size="20" fill="#${theme.color}" font-weight="bold">
