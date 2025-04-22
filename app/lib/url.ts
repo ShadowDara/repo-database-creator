@@ -1,4 +1,6 @@
 // lib/url.ts
+
+import { NextResponse } from "next/server";
 import { settings } from '../lib/js/settings';
 
 export function getSearchParams(request: Request) {
