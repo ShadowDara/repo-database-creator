@@ -10,10 +10,11 @@ export async function GET(request: Request) {
   } = getSearchParams(request);
 
   try {
-    const themes = await loadThemes()
+    const themes = await loadThemes();
     const theme = (themes as ThemeMap)[themeName];
-    const repoCount = await getRepoCount(user)
-
+    console.warn("2")
+    const repoCount = await getRepoCount(user);
+    console.warn("4")
     const svg = `
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
         <defs>
@@ -41,8 +42,9 @@ export async function GET(request: Request) {
           <path fill="#58a6ff" d="M18 13h4v14h-4zM13 18h4v9h-4zM23 16h4v11h-4z"/>
         </g>
       </svg>
-    `
-    console.log("XD")
+    `;
+
+    console.log("XD");
 
     return new Response(svg, {
       headers: {
