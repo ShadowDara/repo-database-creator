@@ -42,6 +42,7 @@ export async function GET(request: Request) {
         </g>
       </svg>
     `
+    console.log("XD")
 
     return new Response(svg, {
       headers: {
