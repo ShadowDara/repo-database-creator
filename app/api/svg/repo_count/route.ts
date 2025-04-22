@@ -1,6 +1,6 @@
 // app/api/svg/repo_count/route.ts
 
-import { getSearchParams, getRepoCount } from '../../../lib/url';
+import { getSearchParams, getGHuserdata } from '../../../lib/url';
 import { loadThemes, ThemeMap } from '../../../lib/themes'
 
 export async function GET(request: Request) {
@@ -23,7 +23,7 @@ export async function GET(request: Request) {
       return new Response("Missing or invalid 'user' parameter", { status: 400 });
     }
 
-    const repoCount = await getRepoCount(user);
+    const repoCount = await getGHuserdata(user);
 
     if (repoCount === null) {
       return new Response("Could not retrieve repo count", { status: 404 });

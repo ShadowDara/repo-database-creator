@@ -19,7 +19,7 @@ export function getSearchParams(request: Request) {
 
 const repoCache = new Map<string, { value: number; timestamp: number }>();
 
-export async function getRepoCount(user: string): Promise<number | null> {
+export async function getGHuserdata(user: string): Promise<number | null> {
   const cacheTime = settings['cacheTime'];
   const now = Date.now();
 
@@ -54,4 +54,8 @@ export async function getRepoCount(user: string): Promise<number | null> {
     console.error("Error fetching GitHub data:", error);
     return null;
   }
+}
+
+export async function getGHrepodata(user: string) {
+  
 }
