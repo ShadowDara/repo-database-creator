@@ -55,7 +55,3 @@ export async function getGHuserdata(user: string): Promise<number | null> {
     return null;
   }
 }
-
-export async function getGHrepodata(user: string) {
-  
-}
