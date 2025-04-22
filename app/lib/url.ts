@@ -30,11 +30,8 @@ export async function getRepoCount(user: string): Promise<number | null> {
   }
 
   try {
-    const response = await fetch(`https://api.github.com/users/${user}`, {
-      next: { revalidate: cacheTime },
-      cache: "force-cache",
-    });
-
+    const response = await fetch(`https://api.github.com/users/${user}`);
+    
     if (!response.ok) {
       const text = await response.text();
       console.error(`GitHub API error (${response.status}): ${text}`);
