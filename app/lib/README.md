@@ -51,11 +51,15 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara
 
 #### All Themes
 
+> The Shown Themes are working with all SVG Cards!
+
 |  |  |  |
-|--|--|--|
+|:--:|:--:|:--:|
 | `default` ![default][default] | `midnight_purple` ![midnight_purple][midnight_purple] | `daras_green` ![daras_green][daras_green] |
 | `daras_pink` ![daras_pink][daras_pink] |  |  |
 |  |  |  |
+
+[Add your theme!](themes.js)
 
 [default]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default
 [midnight_purple]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple

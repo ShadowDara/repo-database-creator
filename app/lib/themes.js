@@ -1,5 +1,7 @@
 // app/lib/config.js
 
+// Info about the thmes in app/lib/README.md
+
 export const themes = {
     default: {
         color: '434d58',
