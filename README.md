@@ -19,6 +19,18 @@ Max Table:
 
 ## Raw Repopository CSV Table
 
+## Full Table Head
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Owner Name</th>
+        <th>Language</th>
+        <th>Description</th>
+        <th>Link</th>
+    </tr>
+</table>
+
 ### Arguments
 
 The content after the `=` in the table is the standard

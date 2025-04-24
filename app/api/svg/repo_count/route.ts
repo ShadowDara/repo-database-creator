@@ -1,5 +1,7 @@
 // app/api/svg/repo_count/route.ts
 
+// to generate an SVG file with the Repository count of the User
+
 import { getSearchParams, getGHuserdata } from '../../../lib/url';
 import { loadThemes, ThemeMap } from '../../../lib/themes'
 

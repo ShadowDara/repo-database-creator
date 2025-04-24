@@ -1,3 +1,7 @@
+// api/raw/route.ts
+
+// to generate a CSV Table with the Repository Data from a User
+
 import { getSearchParams, getGHrepodata, csvEscape } from '../../lib/url';
 
 export async function GET(request: Request) {
