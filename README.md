@@ -223,7 +223,7 @@ value when the argument is not given!
         <td>x</td>
         <td>x</td>
         <td>String</td>
-        <td>daras_green</td>
+        <td>default</td>
     </tr>
 </table>
 
@@ -234,7 +234,7 @@ value when the argument is not given!
 
 ---
 
-[Why is here Python](readme_autocreate/README.md)
+### [Why is here Python](readme_autocreate/README.md)
 
 ---
 

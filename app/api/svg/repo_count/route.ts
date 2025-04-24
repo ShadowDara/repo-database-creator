@@ -26,8 +26,7 @@ export async function GET(request: Request) {
 
     const theme = (themes as ThemeMap)[themeName];
 
-    const svg = `
-  <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
+    const svg = `<svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
         ${createGradientStops(theme.bg_color)}
