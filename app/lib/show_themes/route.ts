@@ -5,11 +5,9 @@ import { themes } from '../themes';
 let cachedThemes: string | null = null;
 
 export async function GET(request: Request) {
-    console.warn("Ask for Theme List");
-
     if (!cachedThemes) {
         cachedThemes = JSON.stringify(themes);
-        console.log("Themes loaded and cached.");
+        console.warn("Themes loaded and cached.");
     } else {
         console.log("Themes served from cache.");
     }
