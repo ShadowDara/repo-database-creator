@@ -27,50 +27,50 @@ export const themes = {
 
     // 0 Years
     wood: {
-        color: "",
-        st_color: "",
-        bg_color: ""
+        color: "ffffff",
+        st_color: "ffffff",
+        bg_color: ['DAB27F', '34230E']
     },
     // 1 Year
     grey: {
-        color: "",
-        st_color: "",
-        bg_color: ""
+        color: "ffffff",
+        st_color: "ffffff",
+        bg_color: ['676665', '393531']
     },
     // 2 Years
     bronze: {
-        color: "",
-        st_color: "",
+        color: "ffffff",
+        st_color: "ffffff",
         bg_color: ['95530A', '713C00']
     },
     // 3 Years
     silber: {
-        color: "",
-        st_color: "",
-        bg_color: ""
+        color: "000000",
+        st_color: "000000",
+        bg_color: ['9D9D9D', '676767']
     },
     // 5 Years
     gold: {
-        color: "",
-        st_color: "",
+        color: "1e1e1e",
+        st_color: "1e1e1e",
         bg_color: ['FFD700', 'FFB200']
     },
     // 8 Years
     diamond: {
-        color: "",
-        st_color: "",
-        bg_color: ""
+        color: "000000",
+        st_color: "000000",
+        bg_color: ['80EBFF', '00ACCD']
     },
     // 11 Rubin
     rubin: {
-        color: "",
-        st_color: "",
-        bg_color: ""
+        color: "ffffff",
+        st_color: "ffffff",
+        bg_color: ['FF3E3E', '690000']
     },
     // 14 Magma
     magma: {
-        color: "",
-        st_color: "",
-        bg_color: ""
+        color: "FF6E10",
+        st_color: "FF6E10",
+        bg_color: ['323232', '000000']
     }
 };

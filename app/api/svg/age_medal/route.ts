@@ -74,7 +74,7 @@ export async function GET(request: Request) {
   </defs>
   <rect x="0" y="0" width="380" height="50" rx="10" fill="url(#gold-bg)" />
   <text x="15" y="32" font-size="22" font-family="Segoe UI">🏆</text>
-  <text x="55" y="32" font-size="20" font-family="Segoe UI" font-weight="600" fill="#1e1e1e">
+  <text x="55" y="32" font-size="20" font-family="Segoe UI" font-weight="600" fill="#${theme.color}">
   ${user}'s Account Age: ${years}
   </text>
 </svg>`
