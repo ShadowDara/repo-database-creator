@@ -77,7 +77,7 @@ export async function getGHrepodata(user: string): Promise<Repository[] | null> 
   }
 
   try {
-    const response = await fetch(`https://api.github.com/users/${user}/repos`);
+    const response = await fetch(`https://api.github.com/users/${user}/repos?per_page=100`);
 
     if (!response.ok) {
       const text = await response.text();
