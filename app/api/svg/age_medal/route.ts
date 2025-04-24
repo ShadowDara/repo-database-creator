@@ -7,6 +7,8 @@ import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientSto
 export async function GET(request: Request) {
   const {
     user,
+    themeName,
+    use_theme
   } = getSearchParams(request);
 
   try {
@@ -16,16 +18,54 @@ export async function GET(request: Request) {
       return new Response("Could not retrieve Github User data", { status: 404 });
     }
 
+    const themes = await loadThemes();
+
+    if (!themes || typeof themes !== 'object') {
+      console.error("Themes not loaded or invalid:", themes);
+      return new Response("Theme loading failed", { status: 500 });
+    }
+
     const createdAt = new Date(udata?.created_at);
     const now = new Date();
 
     let years = now.getFullYear() - createdAt.getFullYear();
 
+    let theme = themes['default'];
+
+    if (use_theme === 'true') {
+      theme = (themes as ThemeMap)[themeName];
+    }
+    else {
+      if (years == 0) {
+        theme = themes['wood']
+      }
+      else if (years == 1) {
+        theme = themes['grey']
+      }
+      else if (years == 2) {
+        theme = themes['bronze']
+      }
+      else if (years <= 5) {
+        theme = themes['silber']
+      }
+      else if (years <= 8) {
+        theme = themes['gold']
+      }
+      else if (years <= 11) {
+        theme = themes['diamond']
+      }
+      else if (years <= 14) {
+        theme = themes['rubin']
+      }
+      else if (years >= 14) {
+        theme = themes['magma']
+      }
+    }
+
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="380" height="50">
   <defs>
     <linearGradient id="gold-bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFD700" />
-      <stop offset="100%" stop-color="#FFB200" />
+    ${createGradientStops(theme.bg_color)}
     </linearGradient>
   </defs>
   <rect x="0" y="0" width="380" height="50" rx="10" fill="url(#gold-bg)" />

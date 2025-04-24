@@ -73,6 +73,7 @@ export function getSearchParams(request: Request) {
     show_link: searchParams.get("link") || "false",
     show_id: searchParams.get("id") || "false",
     themeName: searchParams.get("theme") || "default",
+    use_theme: searchParams.get("use_theme") || "false", // only used for the medal
   };
 }
 
