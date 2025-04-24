@@ -15,9 +15,21 @@ Max Table:
 
 ## Infos
 
-- we use caching to prevent server usage *(16,6 hours)*
+- we use caching to prevent server usage *(24 hours)*
 
 ## Raw Repopository CSV Table
+
+## Full Table Head
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Owner Name</th>
+        <th>Language</th>
+        <th>Description</th>
+        <th>Link</th>
+    </tr>
+</table>
 
 ### Arguments
 
@@ -107,77 +119,91 @@ A SVG Picture which shows the public Repositorys of a User
 
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
+## [Themes](app/lib/README.md)
+
+## All Arguments
+
+<table>
+<tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Variable Type</th>
+        <th>Available in</th>
+        <th>Default</th>
+    </tr>
+    <tr>
+        <td><code>user</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>String</td>
+        <td>shadowdara</td>
+    </tr>
+    <tr>
+        <td><code>description</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><code>language</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><code>show_name</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>true</td>
+    </tr>
+    <tr>
+        <td><code>show_user</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><code>link</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><code>id</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>Boolean</td>
+        <td>false</td>
+    </tr>
+    <tr>
+        <td><code>theme</code></td>
+        <td>x</td>
+        <td>x</td>
+        <td>String</td>
+        <td>daras_green</td>
+    </tr>
+</table>
 
 ## Dev open
 
 <a href="https://repo-database-creator.vercel.app/api/repos_raw">Main Page</a>
 <a href="https://repo-database-creator-git-test-deployment-shadowdaras-projects.vercel.app/api/repos_raw">Test Deployment</a>
 
+---
 
-## All Arguments:
+## Roadmap
 
-<table>
-    <tr>
-        <th>Argument</th>
-        <th>Description</th>
-        <th>Showcase</th>
-        <th>Variable Type</th>
-    </tr>
-    <tr>
-        <td><code>&user=shadowdara</code></td>
-        <td>x</td>
-        <td>x</td>
-        <td>String</td>
-    </tr>
-    <tr>
-        <td><code>&id=false</code></td>
-        <td>x</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>&description=true</code></td>
-        <td>x</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>&language=true</code></td>
-        <td>x</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>show_name=true</code></td>
-        <td>x</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>&show_user=false</code></td>
-        <td>to display the Repository Owner Name</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>&language=true</code></td>
-        <td>to display the Repository Language</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>&description=true</code></td>
-        <td>to display the Repository Description</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-    <tr>
-        <td><code>&link=true</code></td>
-        <td>to display the Repository link</td>
-        <td>x</td>
-        <td>Boolean</td>
-    </tr>
-</table>
+- [ ] make the Readme file
+- [ ] add more themes
+- [ ] more link arguments
+- [ ] more svgs
+- [ ] better documentation
+- [ ] add token for 5k Requests per hour
 
 ---
 
