@@ -26,6 +26,7 @@ interface Repository {
 export type ThemeMap = {
   [key: string]: {
     color: string;
+    st_color: string;
     bg_color: string | string[];
   };
 };

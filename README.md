@@ -119,16 +119,7 @@ A SVG Picture which shows the public Repositorys of a User
 
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
-
-## Themes
-
-### Default
-
-### Midnight Purple
-
-### Daras Green
-
-### Daras Pink
+## [Themes](app/lib/README.md)
 
 ## All Arguments
 

@@ -46,7 +46,7 @@ export async function GET(request: Request) {
           <text x="0" y="-15" font-family="Segoe UI, sans-serif" font-size="20" fill="#${theme.color}" font-weight="bold">
             ${user}
           </text>
-          <text x="0" y="12" font-family="Segoe UI, sans-serif" font-size="14" fill="#c9d1d9">
+          <text x="0" y="12" font-family="Segoe UI, sans-serif" font-size="14" fill="#${theme.st_color}">
             Public Repositories: ${repoCount}
           </text>
         </g>
