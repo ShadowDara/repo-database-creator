@@ -2,8 +2,8 @@
 
 export const themes = {
     default: {
-        color: '',
-        bg_color: '',
+        color: '434d58',
+        bg_color: 'fffefe',
     },
     midnight_purple: {
         color: '9745f5',

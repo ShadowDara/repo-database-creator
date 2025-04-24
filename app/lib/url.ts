@@ -13,7 +13,7 @@ export function getSearchParams(request: Request) {
     show_user: searchParams.get("show_user") || "false",
     show_link: searchParams.get("link") || "false",
     show_id: searchParams.get("id") || "false",
-    themeName: searchParams.get("theme") || "daras_green",
+    themeName: searchParams.get("theme") || "default",
   };
 }
 
