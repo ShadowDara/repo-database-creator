@@ -212,6 +212,7 @@ A SVG Picture which shows the public Repositorys of a User
 - [ ] more svgs
 - [ ] better documentation
 - [ ] add token for 5k Requests per hour
+- [ ] add better project Icon
 
 ---
 

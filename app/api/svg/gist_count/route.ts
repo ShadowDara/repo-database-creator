@@ -1,6 +1,6 @@
 // app/api/svg/repo_count/route.ts
 
-// to generate an SVG file with the Repository count of the User
+// to generate an SVG file with the Gist count of the User
 
 import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/url';
 
@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   } = getSearchParams(request);
 
   try {
-    const udata = await getGHuserdata(user);
+    const udata = await getGHuserdata(user)
 
     if (udata === null) {
       return new Response("Could not retrieve Github User data", { status: 404 });
@@ -43,7 +43,7 @@ export async function GET(request: Request) {
             ${user}
           </text>
           <text x="0" y="12" font-family="Segoe UI, sans-serif" font-size="14" fill="#${theme.st_color}">
-            Public Repositories: ${udata.repo_count}
+            Public Gists: ${udata.repo_count}
           </text>
         </g>
 

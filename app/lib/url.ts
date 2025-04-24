@@ -6,10 +6,17 @@ import { themes } from './themes';
 
 
 // Cache for Github Userdata
-const repoCache = new Map<string, { value: number; timestamp: number }>();
+const repoCache = new Map<string, { value: Userdata[]; timestamp: number }>();
 
 // Cache for Github Repository Data
 const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>();
+
+
+// Structure for the User Data from Github
+interface Userdata {
+  repo_count: number;
+  gist_count: number;
+}
 
 
 // Structure for the Repository Data from Github
@@ -66,7 +73,7 @@ export function getSearchParams(request: Request) {
 
 
 // Fetch Userdata from Github
-export async function getGHuserdata(user: string): Promise<number | null> {
+export async function getGHuserdata(user: string): Promise<Userdata[] | null> {
   const cacheTime = settings['cacheTime'];
   const now = Date.now();
 
@@ -85,17 +92,17 @@ export async function getGHuserdata(user: string): Promise<number | null> {
       return null;
     }
 
-    const data = await response.json();
+    const data: Userdata[] = await response.json();
 
-    if (!data || typeof data.public_repos !== "number") {
-      console.error("Invalid GitHub response:", data);
+    if (!Array.isArray(data)) {
+      console.error("Invalid GitHub response (not an array):", data);
       return null;
     }
 
     console.warn(`Cache Miss for user: ${user}, fetched from GitHub API`);
-    repoCache.set(user, { value: data.public_repos, timestamp: now });
+    repoCache.set(user, { value: data, timestamp: now });
 
-    return data.public_repos;
+    return data;
 
   } catch (error) {
     console.error("Error fetching GitHub data:", error);
