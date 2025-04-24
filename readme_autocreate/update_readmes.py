@@ -33,7 +33,7 @@ def display_card(data, themes, readme1):
             if x == 3:
                 readme1.write(' |\n')
         
-        readme1.write('\n\n')
+        readme1.write('[Add your theme!](themes.js)\n\n')
         
         for link in links:
             readme1.write(f"\n{link}")

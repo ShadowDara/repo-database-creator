@@ -57,7 +57,7 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara
 |  |  |  |
 |:--:|:--:|:--:|
 | `default` ![default][default-repo_count]| `midnight_purple` ![midnight_purple][midnight_purple-repo_count]| `daras_green` ![daras_green][daras_green-repo_count] |
-| `daras_pink` ![daras_pink][daras_pink-repo_count]
+| `daras_pink` ![daras_pink][daras_pink-repo_count][Add your theme!](themes.js)
 
 
 [default-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default
@@ -85,7 +85,7 @@ https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara
 |  |  |  |
 |:--:|:--:|:--:|
 | `default` ![default][default-gist_count]| `midnight_purple` ![midnight_purple][midnight_purple-gist_count]| `daras_green` ![daras_green][daras_green-gist_count] |
-| `daras_pink` ![daras_pink][daras_pink-gist_count]
+| `daras_pink` ![daras_pink][daras_pink-gist_count][Add your theme!](themes.js)
 
 
 [default-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=default
