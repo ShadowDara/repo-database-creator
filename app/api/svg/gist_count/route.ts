@@ -26,7 +26,7 @@ export async function GET(request: Request) {
 
     const theme = (themes as ThemeMap)[themeName];
 
-    const svg = udata.map((u) => `
+    const svg = `
   <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
@@ -43,7 +43,7 @@ export async function GET(request: Request) {
         ${user}
       </text>
       <text x="0" y="12" font-family="Segoe UI, sans-serif" font-size="14" fill="#${theme.st_color}">
-        Public Repositories: ${u.repo_count} <!-- Greife auf das repo_count jedes Userdata zu -->
+        Public Repositories: ${udata.repo_count} <!-- Greife auf das repo_count jedes Userdata zu -->
       </text>
     </g>
 
@@ -51,8 +51,7 @@ export async function GET(request: Request) {
       <circle cx="20" cy="20" r="20" fill="#161b22" />
       <path fill="#58a6ff" d="M18 13h4v14h-4zM13 18h4v9h-4zM23 16h4v11h-4z"/>
     </g>
-  </svg>
-`).join('');
+  </svg>`
 
     return new Response(svg, {
       headers: {

@@ -6,16 +6,22 @@ import { themes } from './themes';
 
 
 // Cache for Github Userdata
-const repoCache = new Map<string, { value: Userdata[]; timestamp: number }>();
+const repoCache = new Map<string, { value: Userdata; timestamp: number }>();
 
 // Cache for Github Repository Data
 const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>();
 
 
-// Structure for the User Data from Github
 interface Userdata {
   repo_count: number;
   gist_count: number;
+
+  //login: string;
+  //id: number;
+  //public_repos: number;
+  //public_gists: number;
+  //followers: number;
+  //following: number;
 }
 
 
@@ -73,7 +79,7 @@ export function getSearchParams(request: Request) {
 
 
 // Fetch Userdata from Github
-export async function getGHuserdata(user: string): Promise<Userdata[] | null> {
+export async function getGHuserdata(user: string): Promise<Userdata | null> {
   const cacheTime = settings['cacheTime'];
   const now = Date.now();
 
@@ -92,10 +98,10 @@ export async function getGHuserdata(user: string): Promise<Userdata[] | null> {
       return null;
     }
 
-    const data: Userdata[] = await response.json();
+    const data: Userdata = await response.json();
 
-    if (!Array.isArray(data)) {
-      console.error("Invalid GitHub response (not an array):", data);
+    if (!data) {
+      console.error("Invalid GitHub response:", data);
       return null;
     }
 
@@ -109,6 +115,7 @@ export async function getGHuserdata(user: string): Promise<Userdata[] | null> {
     return null;
   }
 }
+
 
 
 // Fetch Repository Data from Github
