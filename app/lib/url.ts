@@ -13,13 +13,11 @@ const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>()
 
 
 interface Userdata {
-  repo_count: number;
-  gist_count: number;
+  public_repos: number;
+  public_gists: number;
 
   //login: string;
   //id: number;
-  //public_repos: number;
-  //public_gists: number;
   //followers: number;
   //following: number;
 }
@@ -115,7 +113,6 @@ export async function getGHuserdata(user: string): Promise<Userdata | null> {
     return null;
   }
 }
-
 
 
 // Fetch Repository Data from Github

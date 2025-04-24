@@ -43,7 +43,7 @@ export async function GET(request: Request) {
         ${user}
       </text>
       <text x="0" y="12" font-family="Segoe UI, sans-serif" font-size="14" fill="#${theme.st_color}">
-        Public Repositories: ${udata.repo_count} <!-- Greife auf das repo_count jedes Userdata zu -->
+        Public Repositories: ${udata.public_repos}
       </text>
     </g>
 
