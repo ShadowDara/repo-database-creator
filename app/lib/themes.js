@@ -41,7 +41,7 @@ export const themes = {
     bronze: {
         color: "",
         st_color: "",
-        bg_color: ""
+        bg_color: ['95530A', '713C00']
     },
     // 3 Years
     silber: {
