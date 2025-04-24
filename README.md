@@ -13,14 +13,10 @@ Max Table:
 
 *I need to restructure this Readme soon!*
 
-## Infos
-
-- we use caching to prevent server usage *(24 hours)*
-
 ## Showcase
 
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
-![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green)
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
+![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green)
 
 ## SVGs
 
@@ -71,8 +67,11 @@ A SVG Picture which shows the public Gists of a Githubser
 
 ## [All Themes here!!!](app/lib/README.md)
 
+## Infos
 
-## Project Roadmap
+- we use caching to prevent server usage *(24 hours)*
+
+### Project Roadmap
 
 - [ ] make the Readme file
 - [ ] add more themes

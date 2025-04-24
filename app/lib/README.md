@@ -1,8 +1,6 @@
-# Themes
+# Add your theme in [`themes.js`](themes.js)!
 
-## Add your theme in [`themes.js`](themes.js)!
-
-### Structure Info
+## Structure Info
 
 <table>
     <tr>
@@ -29,13 +27,15 @@
 
 ## Themes
 
-### List
-- default
-- midnight_purple
-- daras_green
-- daras_pink
+### Themelist
+- `default`
+- `midnight_purple`
+- `daras_green`
+- `daras_pink`
 
 go to <a href="#links">Links</a> to see all cards of a theme
+
+---
 
 ### Repository Count Card
 
@@ -66,6 +66,7 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara
 [daras_green]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green
 [daras_pink]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink
 
+---
 
 ### Gist Count Card
 
@@ -96,6 +97,7 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara
 [daras_green_gist]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green
 [daras_pink_gist]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_pink
 
+---
 
 ### <h3 id="links">Links</h3>
 
