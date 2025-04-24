@@ -193,6 +193,16 @@ A SVG Picture which shows the public Repositorys of a User
 
 ---
 
+## Roadmap
+
+- [ ] make the Readme file
+- [ ] add more themes
+- [ ] more link arguments
+- [ ] more svgs
+- [ ] better documentation
+
+---
+
 # Old Reademe Part (i am not finished yet)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).

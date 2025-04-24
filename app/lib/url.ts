@@ -55,3 +55,50 @@ export async function getGHuserdata(user: string): Promise<number | null> {
     return null;
   }
 }
+
+interface Repository {
+  id: number;
+  name: string;
+  html_url: string;
+  language: string | null;
+  description: string | null;
+}
+
+const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>();
+
+export async function getGHrepodata(user: string): Promise<Repository[] | null> {
+  const cacheTime = settings['cacheTime'];
+  const now = Date.now();
+
+  const cached = repoCache2.get(user);
+  if (cached && now - cached.timestamp < cacheTime * 1000) {
+    console.log(`Cache Hit for user: ${user}`);
+    return cached.value;
+  }
+
+  try {
+    const response = await fetch(`https://api.github.com/users/${user}/repos`);
+
+    if (!response.ok) {
+      const text = await response.text();
+      console.error(`GitHub API error (${response.status}): ${text}`);
+      return null;
+    }
+
+    const data: Repository[] = await response.json();
+
+    if (!Array.isArray(data)) {
+      console.error("Invalid GitHub response (not an array):", data);
+      return null;
+    }
+
+    console.warn(`Cache Miss for user: ${user}, fetched from GitHub API`);
+    repoCache2.set(user, { value: data, timestamp: now });
+
+    return data;
+
+  } catch (error) {
+    console.error("Error fetching GitHub data:", error);
+    return null;
+  }
+}
