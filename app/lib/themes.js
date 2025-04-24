@@ -1,15 +1,5 @@
 // app/lib/config.js
 
-// ----        ----
-/* ----> INFO <---- //
-
-bg_color: ['000000', ''] 
-
-add 2 values for the background color to make a linear gradient
-3 values dont work! the third will be ignored!
-
-*/
-
 export const themes = {
     default: {
         color: '434d58',
