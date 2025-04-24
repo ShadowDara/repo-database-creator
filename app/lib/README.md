@@ -27,13 +27,15 @@
     </tr>
 </table>
 
-## All Themes
+## Themes
 
 ### List
 - default
 - midnight_purple
 - daras_green
 - daras_pink
+
+go to <a href="#links">Links</a> to see all cards of a theme
 
 ### Repository Count Card
 
@@ -47,24 +49,28 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara
 
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
-#### Themes
+#### All Themes
 
-| Theme | Showcase |
-|--|--|
-| `default` | ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default) |
-| `midnight_purple` | ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple) |
-| `daras_green` | ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green) |
-| `daras_pink` | ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink) |
-|  |  |
+|  |  |  |
+|--|--|--|
+| `default` ![default][default] | `midnight_purple` ![midnight_purple][midnight_purple] | `daras_green` ![daras_green][daras_green] |
+| `daras_pink` ![daras_pink][daras_pink] |  |  |
+|  |  |  |
 
-### Links
+[default]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default
+[midnight_purple]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple
+[daras_green]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green
+[daras_pink]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink
+
+
+### <h3 id="links">Links</h3>
 
 #### `default`
 ```
 https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default
 ```
 
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default)
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default)
 
 #### `midnight_purple`
 
@@ -72,7 +78,7 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&them
 https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple
 ```
 
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple)
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple)
 
 #### `daras_green`
 
@@ -80,7 +86,7 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&them
 https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green
 ```
 
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
 
 #### `daras_pink`
 
@@ -88,4 +94,4 @@ https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&them
 https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink
 ```
 
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink)
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink)
