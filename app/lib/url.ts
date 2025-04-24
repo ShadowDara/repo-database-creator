@@ -1,7 +1,53 @@
 // lib/url.ts
 
-import { settings } from '../lib/js/settings';
+// import data from Javascript
+import { settings } from './settings';
+import { themes } from './themes';
 
+
+// Cache for Github Userdata
+const repoCache = new Map<string, { value: number; timestamp: number }>();
+
+// Cache for Github Repository Data
+const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>();
+
+
+// Structure for the Repository Data from Github
+interface Repository {
+  id: number;
+  name: string;
+  html_url: string;
+  language: string | null;
+  description: string | null;
+}
+
+
+// Strcuture for loading the themes
+export type ThemeMap = {
+  [key: string]: {
+    color: string;
+    bg_color: string | string[];
+  };
+};
+
+
+// fucntion to load the themes
+export async function loadThemes() {
+  return themes;
+}
+
+
+// function make CSV Data secure from invalid characters
+export function csvEscape(value: string) {
+  const needsQuotes = /[",\n\r]/.test(value);
+  if (needsQuotes) {
+    return `"${value.replace(/"/g, '""')}"`;
+  }
+  return value;
+}
+
+
+// to get the search Params from the Link
 export function getSearchParams(request: Request) {
   const { searchParams } = new URL(request.url);
 
@@ -17,8 +63,8 @@ export function getSearchParams(request: Request) {
   };
 }
 
-const repoCache = new Map<string, { value: number; timestamp: number }>();
 
+// Fetch Userdata from Github
 export async function getGHuserdata(user: string): Promise<number | null> {
   const cacheTime = settings['cacheTime'];
   const now = Date.now();
@@ -56,16 +102,8 @@ export async function getGHuserdata(user: string): Promise<number | null> {
   }
 }
 
-interface Repository {
-  id: number;
-  name: string;
-  html_url: string;
-  language: string | null;
-  description: string | null;
-}
 
-const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>();
-
+// Fetch Repository Data from Github
 export async function getGHrepodata(user: string): Promise<Repository[] | null> {
   const cacheTime = settings['cacheTime'];
   const now = Date.now();
@@ -103,10 +141,13 @@ export async function getGHrepodata(user: string): Promise<Repository[] | null> 
   }
 }
 
-export function csvEscape(value: string) {
-  const needsQuotes = /[",\n\r]/.test(value);
-  if (needsQuotes) {
-    return `"${value.replace(/"/g, '""')}"`;
-  }
-  return value;
+
+// function to make the gradient backgrund for the SVG
+export function createGradientStops(bg_color: string | string[]) {
+  const colors = Array.isArray(bg_color) ? bg_color : [bg_color, bg_color];
+
+  return `
+    <stop offset="0%" stop-color="#${colors[0]}" />
+    <stop offset="100%" stop-color="#${colors[1]}" />
+  `;
 }

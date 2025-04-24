@@ -1,4 +1,14 @@
-// app/lib/js/config.js
+// app/lib/config.js
+
+// ----        ----
+/* ----> INFO <---- //
+
+bg_color: ['000000', ''] 
+
+add 2 values for the background color to make a linear gradient
+3 values dont work! the third will be ignored!
+
+*/
 
 export const themes = {
     default: {
@@ -11,7 +21,7 @@ export const themes = {
     },
     daras_green: {
         color: 'ffffff',
-        bg_color: '000000',
+        bg_color: ['238636', '0d1117'],
     },
     daras_pink: {
         color: 'B20097',

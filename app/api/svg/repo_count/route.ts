@@ -2,8 +2,7 @@
 
 // to generate an SVG file with the Repository count of the User
 
-import { getSearchParams, getGHuserdata } from '../../../lib/url';
-import { loadThemes, ThemeMap } from '../../../lib/themes'
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/url';
 
 export async function GET(request: Request) {
   const {
@@ -35,8 +34,7 @@ export async function GET(request: Request) {
       <svg width="320" height="80" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#238636" />
-            <stop offset="100%" stop-color="#0d1117" />
+            ${createGradientStops(theme.bg_color)}
           </linearGradient>
           <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
             <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00000055"/>

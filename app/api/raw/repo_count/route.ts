@@ -2,8 +2,7 @@
 
 // to generate the raw public Repository count of a user
 
-import { getSearchParams, getGHuserdata } from '../../../lib/url';
-import { loadThemes, ThemeMap } from '../../../lib/themes'
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata } from '../../../lib/url';
 
 export async function GET(request: Request) {
   const {
