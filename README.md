@@ -73,10 +73,10 @@ A SVG Picture which shows the public Gists of a Githubser
 A SVG Picture which shows the age of the Account of a Githubser
 
 ```
-![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 ```
 
-![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 
 ## [All Themes here!!!](app/lib/README.md)
 
