@@ -32,7 +32,10 @@ def main(skript_dir, data_file, themes_file):
     readme1.write(data['readme1']['data']['data3'])
 
     for name in themes.keys():
-        readme1.write(f"\n#### `{name}`\n")
+        readme1.write(f"\n\n#### `{name}`\n")
 
-        for name2 in data['cards']:
-            readme1.write(f"```\nhttps://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme={name2}\n```\n![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme={name2})")
+        for name2, label in data['cards'].items():
+            readme1.write(
+                f"\n```\nhttps://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}\n```\n\n"
+                f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name})\n"
+                )
