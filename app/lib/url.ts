@@ -15,7 +15,7 @@ const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>()
 interface Userdata {
   public_repos: number;
   public_gists: number;
-  created_at: String;
+  created_at: string;
 
   //login: string;
   //id: number;

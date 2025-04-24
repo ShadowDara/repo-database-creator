@@ -7,7 +7,6 @@ import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientSto
 export async function GET(request: Request) {
   const {
     user,
-    themeName,
   } = getSearchParams(request);
 
   try {
@@ -17,14 +16,10 @@ export async function GET(request: Request) {
       return new Response("Could not retrieve Github User data", { status: 404 });
     }
 
-    const themes = await loadThemes();
+    const createdAt = new Date(udata?.created_at);
+    const now = new Date();
 
-    if (!themes || typeof themes !== 'object') {
-      console.error("Themes not loaded or invalid:", themes);
-      return new Response("Theme loading failed", { status: 500 });
-    }
-
-    const theme = (themes as ThemeMap)[themeName];
+    let years = now.getFullYear() - createdAt.getFullYear();
 
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="260" height="50">
   <defs>
@@ -37,7 +32,7 @@ export async function GET(request: Request) {
   <rect x="0" y="0" width="260" height="50" rx="10" fill="url(#gold-bg)" />
   <text x="15" y="32" font-size="22" font-family="Segoe UI">🏆</text>
   <text x="55" y="32" font-size="20" font-family="Segoe UI" font-weight="600" fill="#1e1e1e">
-    {label}: {value}
+    Account Age: ${years}
   </text>
 </svg>`
 
