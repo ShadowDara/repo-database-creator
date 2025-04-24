@@ -78,7 +78,11 @@ A SVG Picture which shows the age of the Account of a Githubser
 
 ![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 
+---
+
 ## [All Themes here!!!](app/lib/README.md)
+
+---
 
 ## Infos
 
