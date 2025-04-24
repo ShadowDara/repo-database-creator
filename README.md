@@ -19,7 +19,7 @@ Max Table:
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green)
 
 ![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
-![weuritz8u's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
+![weuritz8u's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=weuritz8u)
 
 ## SVGs
 
