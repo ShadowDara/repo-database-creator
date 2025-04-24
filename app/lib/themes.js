@@ -8,7 +8,7 @@ export const themes = {
     },
     midnight_purple: {
         color: '9745f5',
-        st_color: '',
+        st_color: 'ffffff',
         bg_color: '000000',
     },
     daras_green: {
@@ -18,7 +18,7 @@ export const themes = {
     },
     daras_pink: {
         color: 'B20097',
-        st_color: '',
+        st_color: 'ffffff',
         bg_color: 'FFE1FA',
     }
 };
