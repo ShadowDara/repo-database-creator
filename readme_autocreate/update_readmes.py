@@ -13,7 +13,7 @@ def open_file(path):
 def display_card(data, themes, readme1):
     for name2, label in data['cards'].items():
         readme1.write(f'\n\n### {label} Card')
-        readme1.write(f'\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```\nhttps://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara\n```\n\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara)')
+        readme1.write(f'\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```\nhttps://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true\n```\n\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)')
         readme1.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
 
         readme1.write('|  |  |  |\n')
@@ -29,7 +29,7 @@ def display_card(data, themes, readme1):
                 x = 1
 
             readme1.write(f'| `{theme}` ![{theme}][{theme}-{name2}]')
-            links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}")
+            links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}&use_theme=true")
             if x == 3:
                 readme1.write(' |\n')
         
@@ -67,6 +67,6 @@ def main(skript_dir, data_file, themes_file):
 
         for name2, label in data['cards'].items():
             readme1.write(
-                f"\n```\nhttps://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}\n```\n\n"
-                f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name})\n"
+                f"\n```\nhttps://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true\n```\n\n"
+                f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n"
                 )
