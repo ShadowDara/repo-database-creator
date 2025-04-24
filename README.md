@@ -98,6 +98,7 @@ A SVG Picture which shows the age of the Account of a Githubser
 - [ ] better documentation
 - [ ] add token for 5k Requests per hour
 - [ ] add better project Icon
+- [ ] create a 2nd theme readme without tables for mobile
 
 
 ## Raw Repopository CSV Table
