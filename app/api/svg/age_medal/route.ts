@@ -30,7 +30,7 @@ export async function GET(request: Request) {
 
     let years = now.getFullYear() - createdAt.getFullYear();
 
-    let theme = themes['default'];
+    let theme
 
     if (use_theme === 'true') {
       theme = (themes as ThemeMap)[themeName];
@@ -60,6 +60,10 @@ export async function GET(request: Request) {
       else if (years >= 14) {
         theme = themes['magma']
       }
+    }
+
+    if (!theme) {
+      theme = themes['default'];
     }
 
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="380" height="50">
