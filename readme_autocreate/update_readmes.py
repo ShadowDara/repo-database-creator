@@ -12,8 +12,9 @@ def open_file(skript_dir, data_file):
 
 def main(skript_dir, data_file):
     data = open_file(skript_dir, data_file)
+
     with open(os.path.join(skript_dir, "README.md"), 'wt', encoding = 'UTF-8'):
         pass
+
     readme1 = open(os.path.join(skript_dir, "README.md"), 'a', encoding = 'UTF-8')
     readme1.write(data['readme1']['data']['data1'])
-
