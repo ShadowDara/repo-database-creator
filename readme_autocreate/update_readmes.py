@@ -10,6 +10,38 @@ def open_file(path):
         return data
 
 
+def display_card(data, themes, readme1):
+    for name2, label in data['cards'].items():
+        readme1.write(f'\n\n### {label} Card')
+        readme1.write(f'\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```\nhttps://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara\n```\n\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara)')
+        readme1.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
+
+        readme1.write('|  |  |  |\n')
+        readme1.write('|:--:|:--:|:--:|\n')
+
+        x = 0
+        links = []
+
+        for theme in themes:
+            x += 1
+
+            if x >= 4:
+                x = 1
+
+            readme1.write(f'| `{theme}` ![{theme}][{theme}-{name2}]')
+            links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}")
+            if x == 3:
+                readme1.write(' |\n')
+        
+        readme1.write('\n\n')
+        
+        for link in links:
+            readme1.write(f"\n{link}")
+        
+        readme1.write('\n')
+
+
+
 def main(skript_dir, data_file, themes_file):
     data = open_file(os.path.join(skript_dir, data_file))
     themes = open_file(themes_file)
@@ -26,8 +58,7 @@ def main(skript_dir, data_file, themes_file):
     
     readme1.write(data['readme1']['data']['data2'])
     
-    #repo_count_card()
-    #gist_count_card()
+    display_card(data, themes, readme1)
 
     readme1.write(data['readme1']['data']['data3'])
 
