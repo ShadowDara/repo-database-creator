@@ -90,7 +90,8 @@ A SVG Picture which shows the age of the Account of a Githubser
 
 ### Project Roadmap
 
-- [ ] Repair the caching!!!
+- [X] Repair the caching!!!
+- [ ] Cache is now again on Day but i want the cache the SVG pictures directly now!
 - [ ] make the Readme file
 - [ ] add more themes
 - [ ] more link arguments
