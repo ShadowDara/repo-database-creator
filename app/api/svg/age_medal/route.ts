@@ -21,7 +21,7 @@ export async function GET(request: Request) {
 
     let years = now.getFullYear() - createdAt.getFullYear();
 
-    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="260" height="50">
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="300" height="50">
   <defs>
     <linearGradient id="gold-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFD700" />
