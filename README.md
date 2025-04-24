@@ -105,11 +105,19 @@ A SVG Picture which shows the public Repositorys of a User
         <th>Argument</th>
         <th>Description</th>
         <th>Variable Type</th>
+        <th>Default Value</th>
     </tr>
     <tr>
-        <td><code>&user=shadowdara</code></td>
+        <td><code>user</code></td>
         <td>the Users Github Username</td>
         <td>String</td>
+        <td>shadowdara</td>
+    </tr>
+    <tr>
+        <td><code>theme</code></td>
+        <td>Theme Style for the SVG</td>
+        <td>String</td>
+        <td>default</td>
     </tr>
 </table>
 
@@ -119,7 +127,7 @@ A SVG Picture which shows the public Repositorys of a User
 
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
-## [Themes](app/lib/README.md)
+## [All Themes here!!!](app/lib/README.md)
 
 ## All Arguments
 
