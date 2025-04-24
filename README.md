@@ -17,8 +17,9 @@ Max Table:
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green)
-![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
-![weuritz8u's Account Age Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+
+![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
+![weuritz8u's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 
 ## SVGs
 
