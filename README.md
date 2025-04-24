@@ -51,7 +51,7 @@ Max Table:
 A SVG Picture which shows the public Repositorys of a Githubuser
 
 ```
-![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
@@ -62,7 +62,7 @@ A SVG Picture which shows the public Repositorys of a Githubuser
 A SVG Picture which shows the public Gists of a Githubser
 
 ```
-![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
@@ -73,7 +73,7 @@ A SVG Picture which shows the public Gists of a Githubser
 A SVG Picture which shows the age of the Account of a Githubser
 
 ```
-![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
 ```
 
 ![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
