@@ -44,3 +44,6 @@ next-env.d.ts
 # https://github.com/weuritz8u/dev-envirment
 dev_envirment_dara/
 dev_start.cmd
+
+# python
+__pycache__
