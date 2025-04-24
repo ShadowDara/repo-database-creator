@@ -17,6 +17,72 @@ Max Table:
 
 - we use caching to prevent server usage *(24 hours)*
 
+## Showcase
+
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green)
+
+## SVGs
+
+### SVG Arguments
+
+<table>
+    <tr>
+        <th>Argument</th>
+        <th>Description</th>
+        <th>Variable Type</th>
+        <th>Default Value</th>
+    </tr>
+    <tr>
+        <td><code>user</code></td>
+        <td>the Users Github Username</td>
+        <td>String</td>
+        <td>shadowdara</td>
+    </tr>
+    <tr>
+        <td><code>theme</code></td>
+        <td>Theme Style for the SVG</td>
+        <td>String</td>
+        <td>default</td>
+    </tr>
+</table>
+
+### Repository Count Table
+
+A SVG Picture which shows the public Repositorys of a Githubuser
+
+```
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+```
+
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
+
+
+### Gist Count Table
+
+A SVG Picture which shows the public Gists of a Githubser
+
+```
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+```
+
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+
+
+## [All Themes here!!!](app/lib/README.md)
+
+
+## Project Roadmap
+
+- [ ] make the Readme file
+- [ ] add more themes
+- [ ] more link arguments
+- [ ] more svgs
+- [ ] better documentation
+- [ ] add token for 5k Requests per hour
+- [ ] add better project Icon
+
+
 ## Raw Repopository CSV Table
 
 ## Full Table Head
@@ -94,41 +160,6 @@ value when the argument is not given!
 </table>
 
 
-## Repo Count SVG
-
-A SVG Picture which shows the public Repositorys of a User
-
-### Arguments
-
-<table>
-    <tr>
-        <th>Argument</th>
-        <th>Description</th>
-        <th>Variable Type</th>
-        <th>Default Value</th>
-    </tr>
-    <tr>
-        <td><code>user</code></td>
-        <td>the Users Github Username</td>
-        <td>String</td>
-        <td>shadowdara</td>
-    </tr>
-    <tr>
-        <td><code>theme</code></td>
-        <td>Theme Style for the SVG</td>
-        <td>String</td>
-        <td>default</td>
-    </tr>
-</table>
-
-```
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
-```
-
-![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
-
-## [All Themes here!!!](app/lib/README.md)
-
 ## All Arguments
 
 <table>
@@ -201,18 +232,6 @@ A SVG Picture which shows the public Repositorys of a User
 
 <a href="https://repo-database-creator.vercel.app/api/repos_raw">Main Page</a>
 <a href="https://repo-database-creator-git-test-deployment-shadowdaras-projects.vercel.app/api/repos_raw">Test Deployment</a>
-
----
-
-## Roadmap
-
-- [ ] make the Readme file
-- [ ] add more themes
-- [ ] more link arguments
-- [ ] more svgs
-- [ ] better documentation
-- [ ] add token for 5k Requests per hour
-- [ ] add better project Icon
 
 ---
 
