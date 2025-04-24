@@ -32,7 +32,7 @@ export async function GET(request: Request) {
   <rect x="0" y="0" width="260" height="50" rx="10" fill="url(#gold-bg)" />
   <text x="15" y="32" font-size="22" font-family="Segoe UI">🏆</text>
   <text x="55" y="32" font-size="20" font-family="Segoe UI" font-weight="600" fill="#1e1e1e">
-    Account Age: ${years}
+  ${user}'s Account Age: ${years}
   </text>
 </svg>`
 
