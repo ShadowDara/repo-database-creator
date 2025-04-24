@@ -1,7 +1,8 @@
 {
   "cards": {
     "repo_count": "Repository Count",
-    "gist_count": "Gist Count"
+    "gist_count": "Gist Count",
+    "age_medal": "Account Medal"
   },
   "readme1": {
     "data": {
