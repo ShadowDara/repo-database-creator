@@ -1,44 +1,23 @@
-import { NextResponse } from "next/server";
-
-interface Repository {
-  id: number;
-  name: string;
-  html_url: string;
-  language: string | null;
-  description: string | null;
-}
-
-function csvEscape(value: string) {
-  const needsQuotes = /[",\n\r]/.test(value);
-  if (needsQuotes) {
-    return `"${value.replace(/"/g, '""')}"`;
-  }
-  return value;
-}
+import { getSearchParams, getGHrepodata, csvEscape } from '../../lib/url';
 
 export async function GET(request: Request) {
 
-  const { searchParams } = new URL(request.url);
-  const user = searchParams.get("user") || "shadowdara";
-  const includeDescription = searchParams.get("description") || "true";
-  const includeLanguage = searchParams.get("language") || "true";
-  const show_user = searchParams.get("show_user") || "false";
-  const show_link = searchParams.get("link") || "false";
-  const show_id = searchParams.get("id") || "false";
-  const show_name = searchParams.get("show_name") || "true";
+  const {
+    user,
+    show_id,
+    show_name,
+    show_user,
+    includeLanguage,
+    includeDescription,
+    show_link
+  } = getSearchParams(request);
 
-  // GitHub API für Repositories
-  const apiRes = await fetch(`https://api.github.com/users/${user}/repos`, {
-    headers: { Accept: "application/vnd.github.v3+json" },
-    next: { revalidate: 86400 },
-    cache: "force-cache",
-  });
+  try {
+    const repos = await getGHrepodata(user)
 
-  if (!apiRes.ok) {
-    return new NextResponse("Error fetching repos", { status: apiRes.status });
-  }
-
-  const repos: Repository[] = await apiRes.json();
+    if (repos === null) {
+      return new Response("Could not retrieve Repository Data", { status: 404 });
+    }
 
   const includeId = show_id === 'true';
   const includeName = show_name === "true";
@@ -75,7 +54,7 @@ export async function GET(request: Request) {
     }),
   ];
 
-  const response = new NextResponse(csvLines.join("\n"), {
+  const response = new Response(csvLines.join("\n"), {
     status: 200,
     headers: {
       "Content-Type": "text/plain",
@@ -85,4 +64,8 @@ export async function GET(request: Request) {
   });
 
   return response;
+} catch (err) {
+    console.error("Error generating CSV:", err);
+    return new Response('Something went wrong', { status: 500 })
+  }
 }

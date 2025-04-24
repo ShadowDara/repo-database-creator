@@ -102,3 +102,11 @@ export async function getGHrepodata(user: string): Promise<Repository[] | null> 
     return null;
   }
 }
+
+export function csvEscape(value: string) {
+  const needsQuotes = /[",\n\r]/.test(value);
+  if (needsQuotes) {
+    return `"${value.replace(/"/g, '""')}"`;
+  }
+  return value;
+}
