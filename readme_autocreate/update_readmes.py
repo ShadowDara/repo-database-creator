@@ -33,7 +33,7 @@ def display_card(data, themes, readme1):
             if x == 3:
                 readme1.write(' |\n')
         
-        readme1.write('[Add your theme!](themes.js)\n\n')
+        readme1.write('\n\n[Add your theme!](themes.js)\n\n')
         
         for link in links:
             readme1.write(f"\n{link}")
@@ -46,15 +46,15 @@ def main(skript_dir, data_file, themes_file):
     data = open_file(os.path.join(skript_dir, data_file))
     themes = open_file(themes_file)
 
-    with open(os.path.join(skript_dir, "README.md"), 'wt', encoding = 'UTF-8'):
+    with open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'wt', encoding = 'UTF-8'):
         pass
 
-    readme1 = open(os.path.join(skript_dir, "README.md"), 'a', encoding = 'UTF-8')
+    readme1 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'a', encoding = 'UTF-8')
 
     readme1.write(data['readme1']['data']['data1'])
 
     for name in themes.keys():
-        readme1.write(f"\n- {name}")
+        readme1.write(f"\n- `{name}`")
     
     readme1.write(data['readme1']['data']['data2'])
     

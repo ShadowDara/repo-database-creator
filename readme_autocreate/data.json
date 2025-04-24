@@ -7,7 +7,7 @@
     "data": {
       "data1": "# Add your theme in [`themes.js`](themes.js)!\n\n## Structure Info\n\n<table>\n    <tr>\n        <th>Name</th>\n        <th>Description</th>\n        <th>Info</th>\n    </tr>\n    <tr>\n        <td><code>color</code></td>\n        <td>Main text color</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td><code>st_color</code></td>\n        <td>Subtext color</td>\n        <td></td>\n    </tr>\n    <tr>\n        <td><code>bg_color<code></td>\n        <td>Background Color</td>\n        <td>add 2 values for the background color to make a linear gradient but 3 values dont work! the third one will be ignored!</td>\n    </tr>\n</table>\n\n## Themes\n\n### Themelist",
       "data2": "\n\ngo to <a href=\"#links\">Links</a> to see all cards of a theme\n\n---\n",
-      "data3": "\n\n<h3 id=\"links\">Links</h3>\n"
+      "data3": "\n\n---\n\n<h3 id=\"links\">Links</h3>\n"
     }
   }
 }
