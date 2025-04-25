@@ -50,7 +50,7 @@ def display_card_mobile(data, themes, readme2):
         links = []
 
         for theme in themes:
-            readme2.write(f'`{theme}`\n![{theme}][{theme}-{name2}]\n\n')
+            readme2.write(f'`{theme}`\n\n![{theme}][{theme}-{name2}]\n\n')
             links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}&use_theme=true")
         
         readme2.write('\n[Add your theme!](themes.js)\n\n')

@@ -3,7 +3,7 @@ this will have NO IMPACT!!!! -->
 
 # Add your theme in [`themes.js`](themes.js)!
 
-**If you are on mobile, click [here](_FOR_MOBILE_/)**
+***If you are on mobile, click [here](_FOR_MOBILE_/)***
 
 ## Structure Info
 
@@ -46,8 +46,7 @@ this will have NO IMPACT!!!! -->
 - `rubin`
 - `magma`
 
-go to <a href="#links">Links</a> to see all cards of a theme
-
+go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all cards of a theme\n
 ---
 
 

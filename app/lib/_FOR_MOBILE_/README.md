@@ -44,8 +44,7 @@ this will have NO IMPACT!!!! -->
 - `rubin`
 - `magma`
 
-go to <a href="#links">Links</a> to see all cards of a theme
-
+go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all cards of a theme\n
 ---
 
 
@@ -66,39 +65,51 @@ go to <a href="#links">Links</a> to see all cards of a theme
 > The Shown Themes are working with all SVG Cards!
 
 `default`
+
 ![default][default-repo_count]
 
 `midnight_purple`
+
 ![midnight_purple][midnight_purple-repo_count]
 
 `daras_green`
+
 ![daras_green][daras_green-repo_count]
 
 `daras_pink`
+
 ![daras_pink][daras_pink-repo_count]
 
 `wood`
+
 ![wood][wood-repo_count]
 
 `grey`
+
 ![grey][grey-repo_count]
 
 `bronze`
+
 ![bronze][bronze-repo_count]
 
 `silber`
+
 ![silber][silber-repo_count]
 
 `gold`
+
 ![gold][gold-repo_count]
 
 `diamond`
+
 ![diamond][diamond-repo_count]
 
 `rubin`
+
 ![rubin][rubin-repo_count]
 
 `magma`
+
 ![magma][magma-repo_count]
 
 
@@ -136,39 +147,51 @@ go to <a href="#links">Links</a> to see all cards of a theme
 > The Shown Themes are working with all SVG Cards!
 
 `default`
+
 ![default][default-gist_count]
 
 `midnight_purple`
+
 ![midnight_purple][midnight_purple-gist_count]
 
 `daras_green`
+
 ![daras_green][daras_green-gist_count]
 
 `daras_pink`
+
 ![daras_pink][daras_pink-gist_count]
 
 `wood`
+
 ![wood][wood-gist_count]
 
 `grey`
+
 ![grey][grey-gist_count]
 
 `bronze`
+
 ![bronze][bronze-gist_count]
 
 `silber`
+
 ![silber][silber-gist_count]
 
 `gold`
+
 ![gold][gold-gist_count]
 
 `diamond`
+
 ![diamond][diamond-gist_count]
 
 `rubin`
+
 ![rubin][rubin-gist_count]
 
 `magma`
+
 ![magma][magma-gist_count]
 
 
@@ -206,39 +229,51 @@ go to <a href="#links">Links</a> to see all cards of a theme
 > The Shown Themes are working with all SVG Cards!
 
 `default`
+
 ![default][default-age_medal]
 
 `midnight_purple`
+
 ![midnight_purple][midnight_purple-age_medal]
 
 `daras_green`
+
 ![daras_green][daras_green-age_medal]
 
 `daras_pink`
+
 ![daras_pink][daras_pink-age_medal]
 
 `wood`
+
 ![wood][wood-age_medal]
 
 `grey`
+
 ![grey][grey-age_medal]
 
 `bronze`
+
 ![bronze][bronze-age_medal]
 
 `silber`
+
 ![silber][silber-age_medal]
 
 `gold`
+
 ![gold][gold-age_medal]
 
 `diamond`
+
 ![diamond][diamond-age_medal]
 
 `rubin`
+
 ![rubin][rubin-age_medal]
 
 `magma`
+
 ![magma][magma-age_medal]
 
 
