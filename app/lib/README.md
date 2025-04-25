@@ -3,6 +3,8 @@ this will have NO IMPACT!!!! -->
 
 # Add your theme in [`themes.js`](themes.js)!
 
+**If you are on mobile, click [here](_FOR_MOBILE_/)**
+
 ## Structure Info
 
 <table>
@@ -55,7 +57,7 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 *Change the Username!*
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&use_theme=true)
 ```
 
@@ -96,7 +98,7 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 *Change the Username!*
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&use_theme=true)
 ```
 
@@ -137,7 +139,7 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 *Change the Username!*
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&use_theme=true)
 ```
 
@@ -179,19 +181,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `default`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=default&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=default&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=default&use_theme=true)
 ```
 
@@ -200,19 +202,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `midnight_purple`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=midnight_purple&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=midnight_purple&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=midnight_purple&use_theme=true)
 ```
 
@@ -221,19 +223,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `daras_green`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_green&use_theme=true)
 ```
 
@@ -242,19 +244,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `daras_pink`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_pink&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_pink&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_pink&use_theme=true)
 ```
 
@@ -263,19 +265,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `wood`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=wood&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=wood&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=wood&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=wood&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=wood&use_theme=true)
 ```
 
@@ -284,19 +286,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `grey`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=grey&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=grey&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=grey&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=grey&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=grey&use_theme=true)
 ```
 
@@ -305,19 +307,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `bronze`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=bronze&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=bronze&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=bronze&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=bronze&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=bronze&use_theme=true)
 ```
 
@@ -326,19 +328,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `silber`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=silber&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=silber&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=silber&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=silber&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=silber&use_theme=true)
 ```
 
@@ -347,19 +349,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `gold`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=gold&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=gold&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=gold&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=gold&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=gold&use_theme=true)
 ```
 
@@ -368,19 +370,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `diamond`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=diamond&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=diamond&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=diamond&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=diamond&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=diamond&use_theme=true)
 ```
 
@@ -389,19 +391,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `rubin`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rubin&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rubin&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=rubin&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=rubin&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=rubin&use_theme=true)
 ```
 
@@ -410,19 +412,19 @@ go to <a href="#links">Links</a> to see all cards of a theme
 
 #### `magma`
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=magma&use_theme=true)
 ```
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=magma&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=magma&use_theme=true)
 ```
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=magma&use_theme=true)
 
-```
+```md
 ![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=magma&use_theme=true)
 ```
 

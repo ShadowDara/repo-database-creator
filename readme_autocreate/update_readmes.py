@@ -13,7 +13,7 @@ def open_file(path):
 def display_card(data, themes, readme1):
     for name2, label in data['cards'].items():
         readme1.write(f'\n\n### {label} Card')
-        readme1.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
+        readme1.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
         readme1.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
 
         readme1.write('|  |  |  |\n')
@@ -41,6 +41,25 @@ def display_card(data, themes, readme1):
         readme1.write('\n')
 
 
+def display_card_mobile(data, themes, readme1):
+    for name2, label in data['cards'].items():
+        readme1.write(f'\n\n### {label} Card')
+        readme1.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
+        readme1.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
+
+        links = []
+
+        for theme in themes:
+            readme1.write(f'`{theme}` ![{theme}][{theme}-{name2}] ')
+            links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}&use_theme=true")
+        
+        readme1.write('\n\n[Add your theme!](themes.js)\n\n')
+        
+        for link in links:
+            readme1.write(f"\n{link}")
+        
+        readme1.write('\n')
+
 
 def main(skript_dir, data_file, themes_file):
     data = open_file(os.path.join(skript_dir, data_file))
@@ -52,6 +71,8 @@ def main(skript_dir, data_file, themes_file):
     readme1 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'a', encoding = 'UTF-8')
 
     readme1.write(data['readme1']['data']['data1'])
+    readme1.write(data['readme1']['data']['data4'])
+    readme1.write(data['readme1']['data']['data5'])
 
     for name in themes.keys():
         readme1.write(f"\n- `{name}`")
@@ -67,6 +88,34 @@ def main(skript_dir, data_file, themes_file):
 
         for name2, label in data['cards'].items():
             readme1.write(
-                f"\n```\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n```\n\n"
+                f"\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n```\n\n"
+                f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n"
+                )
+
+    # README for mobile!
+
+    with open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'a', encoding = 'UTF-8'):
+        pass
+
+    readme2 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'a', encoding = 'UTF-8')
+
+    readme2.write(data['readme1']['data']['data1'])
+    readme2.write(data['readme1']['data']['data5'])
+
+    for name in themes.keys():
+        readme2.write(f"\n- `{name}`")
+    
+    readme2.write(data['readme1']['data']['data2'])
+    
+    display_card_mobile(data, themes, readme2)
+
+    readme2.write(data['readme1']['data']['data3'])
+
+    for name in themes.keys():
+        readme2.write(f"\n\n#### `{name}`\n")
+
+        for name2, label in data['cards'].items():
+            readme2.write(
+                f"\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n```\n\n"
                 f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n"
                 )
