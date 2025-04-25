@@ -91,7 +91,7 @@ export async function getGHuserdata(user: string): Promise<Userdata | null> {
 
   try {
     const response = await fetch(`https://api.github.com/users/${user}`);
-    
+
     if (!response.ok) {
       const text = await response.text();
       console.error(`GitHub API error (${response.status}): ${text}`);
