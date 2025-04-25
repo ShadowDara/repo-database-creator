@@ -65,7 +65,7 @@ def main(skript_dir, data_file, themes_file):
     data = open_file(os.path.join(skript_dir, data_file))
     themes = open_file(themes_file)
 
-    readme1 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'a', encoding = 'UTF-8')
+    readme1 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'wt', encoding = 'UTF-8')
 
     readme1.write(data['readme1']['data']['data1'])
     readme1.write(data['readme1']['data']['data4'])
@@ -91,7 +91,7 @@ def main(skript_dir, data_file, themes_file):
 
 
     # README for mobile!
-    readme2 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'a', encoding = 'UTF-8')
+    readme2 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'wt', encoding = 'UTF-8')
 
     readme2.write(data['readme1']['data']['data1'])
     readme2.write(data['readme1']['data']['data5'])
