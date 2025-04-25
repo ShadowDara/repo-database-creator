@@ -29,9 +29,9 @@ export const themes = {
         bg_color: ['FF0000', '9B00FF'],
     },
 	rainbow: {
-        color: 'ffffff',
-        st_color: 'ffffff',
-        bg_color: ['FF0000', '9B00FF'],
+        color: '333333',
+        st_color: '000000',
+        bg_color: ['FF0000', 'FF8B00', 'fdec0f', '008B17', '0600FF', '9B00FF'],
     },
 
     // themes made for the medal, but the work
