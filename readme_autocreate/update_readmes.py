@@ -41,24 +41,24 @@ def display_card(data, themes, readme1):
         readme1.write('\n')
 
 
-def display_card_mobile(data, themes, readme1):
+def display_card_mobile(data, themes, readme2):
     for name2, label in data['cards'].items():
-        readme1.write(f'\n\n### {label} Card')
-        readme1.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
-        readme1.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
+        readme2.write(f'\n\n### {label} Card')
+        readme2.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
+        readme2.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
 
         links = []
 
         for theme in themes:
-            readme1.write(f'`{theme}` ![{theme}][{theme}-{name2}] ')
+            readme2.write(f'`{theme}`\n![{theme}][{theme}-{name2}]\n\n')
             links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}&use_theme=true")
         
-        readme1.write('\n\n[Add your theme!](themes.js)\n\n')
+        readme2.write('\n[Add your theme!](themes.js)\n\n')
         
         for link in links:
-            readme1.write(f"\n{link}")
+            readme2.write(f"\n{link}")
         
-        readme1.write('\n')
+        readme2.write('\n')
 
 
 def main(skript_dir, data_file, themes_file):
@@ -94,7 +94,7 @@ def main(skript_dir, data_file, themes_file):
 
     # README for mobile!
 
-    with open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'a', encoding = 'UTF-8'):
+    with open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'wt', encoding = 'UTF-8'):
         pass
 
     readme2 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'a', encoding = 'UTF-8')
