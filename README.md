@@ -73,12 +73,16 @@ A SVG Picture which shows the public Gists of a Githubser
 A SVG Picture which shows the age of the Account of a Githubser
 
 ```
-![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 ```
 
-![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
+![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
+
+---
 
 ## [All Themes here!!!](app/lib/README.md)
+
+---
 
 ## Infos
 
@@ -86,7 +90,8 @@ A SVG Picture which shows the age of the Account of a Githubser
 
 ### Project Roadmap
 
-- [ ] Repair the caching!!!
+- [X] Repair the caching!!!
+- [ ] Cache is now again on Day but i want the cache the SVG pictures directly now!
 - [ ] make the Readme file
 - [ ] add more themes
 - [ ] more link arguments
@@ -94,6 +99,7 @@ A SVG Picture which shows the age of the Account of a Githubser
 - [ ] better documentation
 - [ ] add token for 5k Requests per hour
 - [ ] add better project Icon
+- [ ] create a 2nd theme readme without tables for mobile
 
 
 ## Raw Repopository CSV Table
