@@ -1,6 +1,6 @@
 // app/lib/config.js
 
-// Info about the thmes in app/lib/README.md
+// More Infos about adding themes in app/lib/README.md or app/lib/_FOR_MOBILE_/README.md
 
 export const themes = {
     default: {
@@ -23,8 +23,19 @@ export const themes = {
         st_color: '000000',
         bg_color: 'FFE1FA',
     },
-    // themes made for the medal, but the work although for the other cards!
+    red_purple: {
+        color: 'ffffff',
+        st_color: 'ffffff',
+        bg_color: ['FF0000', '9B00FF'],
+    },
+	rainbow: {
+        color: '333333',
+        st_color: '000000',
+        bg_color: ['FF0000', 'FF8B00', 'fdec0f', '008B17', '0600FF', '9B00FF'],
+    },
 
+    // themes made for the medal, but the work
+    // although for the other cards!
     // 0 Years
     wood: {
         color: "ffffff",
