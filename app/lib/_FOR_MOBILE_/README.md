@@ -3,32 +3,64 @@ this will have NO IMPACT!!!! -->
 
 # Add your theme in [`themes.js`](themes.js)!
 
-## Structure Info
 
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Description</th>
-        <th>Info</th>
-    </tr>
-    <tr>
-        <td><code>color</code></td>
-        <td>Main text color</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>st_color</code></td>
-        <td>Subtext color</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><code>bg_color<code></td>
-        <td>Background Color</td>
-        <td>add 2 values for the background color to make a linear gradient but 3 values dont work! the third one will be ignored!</td>
-    </tr>
-</table>
+## Adding Themes
 
-## Themes
+Feel free to add a new Theme if you have an good idea! Here are some Information about the Themes!
+
+### Structure
+
+```js
+default: {
+        color: '434d58',
+        st_color: '000000',
+        bg_color: 'fffefe',
+    },
+```
+
+### Info
+
+`color`
+- Main text color<
+
+`st_color`
+- Subtext color
+
+`bg_color`
+- Background Color
+- The Background color can from 1 upto 6 values to create a Gradient
+
+#### Structure for a Gradient Background
+
+**with 2**
+
+```js
+bg_color: ['000000', 'f00000']
+```
+
+**with 3**
+
+```js
+bg_color: ['000000', 'f00000', 'ff0000']
+```
+
+**with 4**
+
+```js
+bg_color: ['000000', 'f00000', 'ff0000' 'fff000']
+```
+
+**with 5**
+
+```js
+bg_color: ['000000', 'f00000', 'ff0000', 'fff0000', 'fffff00']
+```
+
+**with 6**
+
+```js
+bg_color: ['000000', 'f00000', 'ff0000', 'fff0000', 'ffff00', 'fffff0']
+```
 
 ### Themelist
 - `default`
@@ -44,7 +76,8 @@ this will have NO IMPACT!!!! -->
 - `rubin`
 - `magma`
 
-go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all cards of a theme\n
+go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all cards of a theme
+
 ---
 
 
