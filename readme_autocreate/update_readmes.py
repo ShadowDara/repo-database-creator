@@ -65,9 +65,6 @@ def main(skript_dir, data_file, themes_file):
     data = open_file(os.path.join(skript_dir, data_file))
     themes = open_file(themes_file)
 
-    with open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'wt', encoding = 'UTF-8'):
-        pass
-
     readme1 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "README.md"), 'a', encoding = 'UTF-8')
 
     readme1.write(data['readme1']['data']['data1'])
@@ -92,11 +89,8 @@ def main(skript_dir, data_file, themes_file):
                 f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n"
                 )
 
+
     # README for mobile!
-
-    with open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'wt', encoding = 'UTF-8'):
-        pass
-
     readme2 = open(os.path.join(os.path.dirname(skript_dir), "app", "lib", "_FOR_MOBILE_", "README.md"), 'a', encoding = 'UTF-8')
 
     readme2.write(data['readme1']['data']['data1'])
