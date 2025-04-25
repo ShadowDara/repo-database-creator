@@ -156,12 +156,18 @@ export async function getGHrepodata(user: string): Promise<Repository[] | null> 
 }
 
 
-// function to make the gradient backgrund for the SVG
+// function to make the gradient backgrund for the SVG with up
+// to 6 colors
 export function createGradientStops(bg_color: string | string[]) {
-  const colors = Array.isArray(bg_color) ? bg_color : [bg_color, bg_color];
+  const colors = Array.isArray(bg_color) ? bg_color.slice(0, 6) : [bg_color, bg_color];
 
-  return `
-    <stop offset="0%" stop-color="#${colors[0]}" />
-    <stop offset="100%" stop-color="#${colors[1]}" />
-  `;
+  const count = colors.length;
+
+  if (count < 1) return "No Colors"
+
+  return colors
+    .map((color, index) => {
+      const offset = (count === 1) ? 0 : (index * 100) / (count - 1);
+      return `<stop offset="${offset.toFixed(2)}%" stop-color="#${color}" />`;
+    }).join("\n")
 }
