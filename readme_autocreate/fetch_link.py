@@ -6,6 +6,6 @@ def fetch_and_save(link, filename):
         response.raise_for_status()
         with open(filename, 'wb') as f:
             f.write(response.content)
-        print(f'Data saved succesfully in "{filename}" gespeichert.')
+        print(f'Data saved succesfully in "{filename}".')
     except requests.exceptions.RequestException as e:
         print(f'Error while fetching data: {e}')
