@@ -46,6 +46,8 @@ Max Table:
     </tr>
 </table>
 
+---
+
 ### Repository Count Card
 
 A SVG Picture which shows the public Repositorys of a Githubuser
@@ -56,6 +58,7 @@ A SVG Picture which shows the public Repositorys of a Githubuser
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
+---
 
 ### Gist Count Card
 
@@ -67,6 +70,7 @@ A SVG Picture which shows the public Gists of a Githubser
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara)
 
+---
 
 ### Account Age Card
 
