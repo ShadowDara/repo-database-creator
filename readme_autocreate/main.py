@@ -18,7 +18,7 @@ themes_file = os.path.join(skript_dir, "themes.json")
 
 def main():
     fetch_and_save(link, themes_file)
-    update_readmes.main(skript_dir, data_file, themes_file)
+    update_readmes.start(skript_dir, data_file, themes_file)
 
 
 import requests
