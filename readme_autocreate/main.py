@@ -1,10 +1,13 @@
 import os
 
 import update_readmes
+import fetch_link
 
 
 # readme_autocreate/
 data_file = "data.json"
+
+link = "https://repo-database-creator.vercel.app/api/svg/theme_test"
 
 
 skript_dir = os.path.dirname(os.path.abspath(__file__))
@@ -15,6 +18,7 @@ themes_file = os.path.join(skript_dir, "themes.json")
 
 
 def main():
+    fetch_link.fetch_and_save(link, themes.json)
     update_readmes.main(skript_dir, data_file, themes_file)
 
 if __name__ == '__main__':
