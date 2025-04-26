@@ -33,7 +33,7 @@ def display_card(data, themes, readme1):
             if x == 3:
                 readme1.write(' |\n')
         
-        readme1.write('\n\n[Add your theme!](themes.js)\n---\n\n')
+        readme1.write('\n\n[Add your theme!](themes.js)\n\n---\n\n')
         
         for link in links:
             readme1.write(f"\n{link}")
@@ -53,7 +53,7 @@ def display_card_mobile(data, themes, readme2):
             readme2.write(f'`{theme}`\n\n![{theme}][{theme}-{name2}]\n\n')
             links.append(f"[{theme}-{name2}]: https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={theme}&use_theme=true")
         
-        readme2.write('\n[Add your theme!](themes.js)\n---\n\n')
+        readme2.write('\n[Add your theme!](themes.js)\n\n---\n\n')
         
         for link in links:
             readme2.write(f"\n{link}")

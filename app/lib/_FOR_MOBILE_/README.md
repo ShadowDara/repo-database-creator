@@ -158,6 +158,8 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 [Add your theme!](themes.js)
 
+---
+
 
 [default-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default&use_theme=true
 [midnight_purple-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple&use_theme=true
@@ -250,6 +252,8 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 [Add your theme!](themes.js)
 
+---
+
 
 [default-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=default&use_theme=true
 [midnight_purple-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=midnight_purple&use_theme=true
@@ -341,6 +345,8 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 
 [Add your theme!](themes.js)
+
+---
 
 
 [default-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=default&use_theme=true
