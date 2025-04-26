@@ -81,7 +81,7 @@ def start(skript_dir, data_file, themes_file):
     readme1.write(data['readme1']['data']['data3'])
 
     for name in themes.keys():
-        readme1.write(f"\n\n#### `{name}`\n")
+        readme1.write(f"\n\n### `{name}`\n")
 
         for name2, label in data['cards'].items():
             readme1.write(
