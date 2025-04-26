@@ -61,7 +61,7 @@ def display_card_mobile(data, themes, readme2):
         readme2.write('\n')
 
 
-def main(skript_dir, data_file, themes_file):
+def start(skript_dir, data_file, themes_file):
     data = open_file(os.path.join(skript_dir, data_file))
     themes = open_file(themes_file)
 
