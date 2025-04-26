@@ -367,10 +367,10 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [magma-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=magma&use_theme=true
 
 
-<h3 id="links">Links</h3>
+<h2 id="links">Links</h2>
 
 
-#### `default`
+### `default`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=default&use_theme=true)
@@ -391,7 +391,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=default&use_theme=true)
 
 
-#### `midnight_purple`
+### `midnight_purple`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple&use_theme=true)
@@ -412,7 +412,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=midnight_purple&use_theme=true)
 
 
-#### `daras_green`
+### `daras_green`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green&use_theme=true)
@@ -433,7 +433,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_green&use_theme=true)
 
 
-#### `daras_pink`
+### `daras_pink`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink&use_theme=true)
@@ -454,7 +454,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_pink&use_theme=true)
 
 
-#### `red_purple`
+### `red_purple`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=red_purple&use_theme=true)
@@ -475,7 +475,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=red_purple&use_theme=true)
 
 
-#### `rainbow`
+### `rainbow`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rainbow&use_theme=true)
@@ -496,7 +496,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=rainbow&use_theme=true)
 
 
-#### `wood`
+### `wood`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=wood&use_theme=true)
@@ -517,7 +517,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=wood&use_theme=true)
 
 
-#### `grey`
+### `grey`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=grey&use_theme=true)
@@ -538,7 +538,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=grey&use_theme=true)
 
 
-#### `bronze`
+### `bronze`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=bronze&use_theme=true)
@@ -559,7 +559,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=bronze&use_theme=true)
 
 
-#### `silber`
+### `silber`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=silber&use_theme=true)
@@ -580,7 +580,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=silber&use_theme=true)
 
 
-#### `gold`
+### `gold`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=gold&use_theme=true)
@@ -601,7 +601,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=gold&use_theme=true)
 
 
-#### `diamond`
+### `diamond`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=diamond&use_theme=true)
@@ -622,7 +622,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=diamond&use_theme=true)
 
 
-#### `rubin`
+### `rubin`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rubin&use_theme=true)
@@ -643,7 +643,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=rubin&use_theme=true)
 
 
-#### `magma`
+### `magma`
 
 ```md
 ![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=magma&use_theme=true)
