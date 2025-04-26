@@ -220,8 +220,6 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [magma-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=magma&use_theme=true
 
 
----
-
 <h3 id="links">Links</h3>
 
 
