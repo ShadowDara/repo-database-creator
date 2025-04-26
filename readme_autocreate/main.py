@@ -7,7 +7,7 @@ import fetch_link
 # readme_autocreate/
 data_file = "data.json"
 
-link = "https://repo-database-creator.vercel.app/api/svg/theme_test"
+link = "https://repo-database-creator.vercel.app/api/svg/test_theme"
 
 
 skript_dir = os.path.dirname(os.path.abspath(__file__))
