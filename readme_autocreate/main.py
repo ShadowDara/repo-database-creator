@@ -1,7 +1,6 @@
 import os
 
 import update_readmes
-import fetch_link
 
 
 # readme_autocreate/
@@ -18,8 +17,21 @@ themes_file = os.path.join(skript_dir, "themes.json")
 
 
 def main():
-    fetch_link.fetch_and_save(link, themes.json)
+    fetch_and_save(link, themes.json)
     update_readmes.main(skript_dir, data_file, themes_file)
 
 if __name__ == '__main__':
     main()
+
+
+import requests
+
+def fetch_and_save(link, filename):
+    try:
+        response = requests.get(link)
+        response.raise_for_status()
+        with open(filename, 'wb') as f:
+            f.write(response.content)
+        print(f'Data saved succesfully in "{filename}".')
+    except requests.exceptions.RequestException as e:
+        print(f'Error while fetching data: {e}')
