@@ -67,6 +67,8 @@ bg_color: ['000000', 'f00000', 'ff0000', 'fff0000', 'ffff00', 'fffff0']
 - `midnight_purple`
 - `daras_green`
 - `daras_pink`
+- `red_purple`
+- `rainbow`
 - `wood`
 - `grey`
 - `bronze`
@@ -113,6 +115,14 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 ![daras_pink][daras_pink-repo_count]
 
+`red_purple`
+
+![red_purple][red_purple-repo_count]
+
+`rainbow`
+
+![rainbow][rainbow-repo_count]
+
 `wood`
 
 ![wood][wood-repo_count]
@@ -153,6 +163,8 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [midnight_purple-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=midnight_purple&use_theme=true
 [daras_green-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green&use_theme=true
 [daras_pink-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_pink&use_theme=true
+[red_purple-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=red_purple&use_theme=true
+[rainbow-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rainbow&use_theme=true
 [wood-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=wood&use_theme=true
 [grey-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=grey&use_theme=true
 [bronze-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=bronze&use_theme=true
@@ -195,6 +207,14 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 ![daras_pink][daras_pink-gist_count]
 
+`red_purple`
+
+![red_purple][red_purple-gist_count]
+
+`rainbow`
+
+![rainbow][rainbow-gist_count]
+
 `wood`
 
 ![wood][wood-gist_count]
@@ -235,6 +255,8 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [midnight_purple-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=midnight_purple&use_theme=true
 [daras_green-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_green&use_theme=true
 [daras_pink-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=daras_pink&use_theme=true
+[red_purple-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=red_purple&use_theme=true
+[rainbow-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=rainbow&use_theme=true
 [wood-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=wood&use_theme=true
 [grey-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=grey&use_theme=true
 [bronze-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=bronze&use_theme=true
@@ -277,6 +299,14 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 ![daras_pink][daras_pink-age_medal]
 
+`red_purple`
+
+![red_purple][red_purple-age_medal]
+
+`rainbow`
+
+![rainbow][rainbow-age_medal]
+
 `wood`
 
 ![wood][wood-age_medal]
@@ -317,6 +347,8 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [midnight_purple-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=midnight_purple&use_theme=true
 [daras_green-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_green&use_theme=true
 [daras_pink-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_pink&use_theme=true
+[red_purple-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=red_purple&use_theme=true
+[rainbow-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=rainbow&use_theme=true
 [wood-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=wood&use_theme=true
 [grey-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=grey&use_theme=true
 [bronze-age_medal]: https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=bronze&use_theme=true
@@ -414,6 +446,48 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ```
 
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=daras_pink&use_theme=true)
+
+
+#### `red_purple`
+
+```md
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=red_purple&use_theme=true)
+```
+
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=red_purple&use_theme=true)
+
+```md
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=red_purple&use_theme=true)
+```
+
+![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=red_purple&use_theme=true)
+
+```md
+![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=red_purple&use_theme=true)
+```
+
+![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=red_purple&use_theme=true)
+
+
+#### `rainbow`
+
+```md
+![](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rainbow&use_theme=true)
+```
+
+![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=rainbow&use_theme=true)
+
+```md
+![](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=rainbow&use_theme=true)
+```
+
+![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=rainbow&use_theme=true)
+
+```md
+![](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=rainbow&use_theme=true)
+```
+
+![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&theme=rainbow&use_theme=true)
 
 
 #### `wood`

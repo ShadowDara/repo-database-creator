@@ -6,7 +6,7 @@ import update_readmes
 # readme_autocreate/
 data_file = "data.json"
 
-link = "https://repo-database-creator.vercel.app/api/svg/test_theme"
+link = "https://repo-database-creator.vercel.app/lib/show_themes"
 
 
 skript_dir = os.path.dirname(os.path.abspath(__file__))
@@ -17,11 +17,8 @@ themes_file = os.path.join(skript_dir, "themes.json")
 
 
 def main():
-    fetch_and_save(link, themes.json)
+    fetch_and_save(link, themes_file)
     update_readmes.main(skript_dir, data_file, themes_file)
-
-if __name__ == '__main__':
-    main()
 
 
 import requests
@@ -35,3 +32,7 @@ def fetch_and_save(link, filename):
         print(f'Data saved succesfully in "{filename}".')
     except requests.exceptions.RequestException as e:
         print(f'Error while fetching data: {e}')
+
+
+if __name__ == '__main__':
+    main()
