@@ -12,9 +12,9 @@ def open_file(path):
 
 def display_card(data, themes, readme1):
     for name2, label in data['cards'].items():
-        readme1.write(f'\n\n### {label} Card')
-        readme1.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
-        readme1.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
+        readme1.write(f'\n\n## {label} Card')
+        readme1.write(f"\n\n### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
+        readme1.write('\n\n### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
 
         readme1.write('|  |  |  |\n')
         readme1.write('|:--:|:--:|:--:|\n')
@@ -43,9 +43,9 @@ def display_card(data, themes, readme1):
 
 def display_card_mobile(data, themes, readme2):
     for name2, label in data['cards'].items():
-        readme2.write(f'\n\n### {label} Card')
-        readme2.write(f"\n\n#### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
-        readme2.write('\n\n#### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
+        readme2.write(f'\n\n## {label} Card')
+        readme2.write(f"\n\n### Base Link without Theme\n\n*Change the Username!*\n\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)\n```\n\n![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&use_theme=true)")
+        readme2.write('\n\n### All Themes\n\n> The Shown Themes are working with all SVG Cards!\n\n')
 
         links = []
 

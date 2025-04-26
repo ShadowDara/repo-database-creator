@@ -62,7 +62,9 @@ bg_color: ['000000', 'f00000', 'ff0000', 'fff0000', 'fffff00']
 bg_color: ['000000', 'f00000', 'ff0000', 'fff0000', 'ffff00', 'fffff0']
 ```
 
-### Themelist
+# Themes
+
+## Themelist
 - `default`
 - `midnight_purple`
 - `daras_green`
@@ -83,9 +85,9 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 ---
 
 
-### Repository Count Card
+## Repository Count Card
 
-#### Base Link without Theme
+### Base Link without Theme
 
 *Change the Username!*
 
@@ -95,7 +97,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&use_theme=true)
 
-#### All Themes
+### All Themes
 
 > The Shown Themes are working with all SVG Cards!
 
@@ -177,9 +179,9 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [magma-repo_count]: https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=magma&use_theme=true
 
 
-### Gist Count Card
+## Gist Count Card
 
-#### Base Link without Theme
+### Base Link without Theme
 
 *Change the Username!*
 
@@ -189,7 +191,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 ![Shadowdara's Gist Count Card](https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&use_theme=true)
 
-#### All Themes
+### All Themes
 
 > The Shown Themes are working with all SVG Cards!
 
@@ -271,9 +273,9 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 [magma-gist_count]: https://repo-database-creator.vercel.app/api/svg/gist_count?user=shadowdara&theme=magma&use_theme=true
 
 
-### Account Medal Card
+## Account Medal Card
 
-#### Base Link without Theme
+### Base Link without Theme
 
 *Change the Username!*
 
@@ -283,7 +285,7 @@ go to <code><b><a href="#links">Full Theme Showcase</a></b></code> to see all ca
 
 ![Shadowdara's Account Medal Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara&use_theme=true)
 
-#### All Themes
+### All Themes
 
 > The Shown Themes are working with all SVG Cards!
 
