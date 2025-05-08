@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "poststart": "python3 readme_autocreate/main.py",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --turbopack",
     "lint": "next lint"
   },
   "dependencies": {
