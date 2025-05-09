@@ -2,7 +2,7 @@
 
 // to generate an SVG file with the Repository count of the User
 
-import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/url';
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/fetching/main';
 
 export async function GET(request: Request) {
   const {

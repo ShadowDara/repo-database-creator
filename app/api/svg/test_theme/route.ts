@@ -3,7 +3,7 @@
 // for testing themes without the Github API
 // add theme as an Argument after the link!
 
-import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/url';
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/fetching/main';
 
 export async function GET(request: Request) {
   const {

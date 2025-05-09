@@ -88,6 +88,10 @@ def start(skript_dir, data_file, themes_file):
                 f"\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n```\n\n"
                 f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n"
                 )
+    
+    readme1.close()
+    
+    print("README.md updated!")
 
 
     # README for mobile!
@@ -113,3 +117,7 @@ def start(skript_dir, data_file, themes_file):
                 f"\n```md\n![](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n```\n\n"
                 f"![Shadowdara's {label} Card](https://repo-database-creator.vercel.app/api/svg/{name2}?user=shadowdara&theme={name}&use_theme=true)\n"
                 )
+    
+    readme2.close()
+
+    print("README.md for mobile updated!")

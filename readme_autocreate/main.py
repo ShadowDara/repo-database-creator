@@ -6,7 +6,7 @@ import update_readmes
 # readme_autocreate/
 data_file = "data.json"
 
-link = "https://repo-database-creator.vercel.app/lib/show_themes"
+link = "http://localhost:3000/lib/show_themes"
 
 
 skript_dir = os.path.dirname(os.path.abspath(__file__))

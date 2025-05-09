@@ -6,3 +6,9 @@ manually!
 
 But Currently it is not working to get the themes automatically
 from `app/lib/themes.js`!
+
+to start the script you can although run
+
+```sh
+npm run poststart
+```
