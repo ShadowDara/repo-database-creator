@@ -1,4 +1,4 @@
-// lib/url.ts
+// lib/fetching.ts
 
 // made by shadowdara
 // 2025
@@ -15,8 +15,8 @@
 
 
 // import data from Javascript
-import { settings } from '../settings';
-import { themes } from '../themes';
+import { settings } from './settings';
+import { themes } from './themes';
 
 
 // ===== DATA CACHING =====
@@ -237,6 +237,7 @@ export async function getGHevents(user: string): Promise<Events[] | null> {
   }
 }
 
+
 // ===== SVG GRADIENT BACKGROUND =====
 //
 // function to make the gradient backgrund for the SVG with up
@@ -254,3 +255,7 @@ export function createGradientStops(bg_color: string | string[]) {
       return `<stop offset="${offset.toFixed(2)}%" stop-color="#${color}" />`;
     }).join("\n")
 }
+
+
+// ===== LOADING THE SITEMAP =====
+// soon

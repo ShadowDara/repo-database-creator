@@ -1,9 +1,9 @@
-// app/api/svg/test_theme/route.ts
+// app/api/svg/test_themes/route.ts
 
 // for testing themes without the Github API
 // add theme as an Argument after the link!
 
-import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/fetching/main';
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/fetching';
 
 export async function GET(request: Request) {
   const {

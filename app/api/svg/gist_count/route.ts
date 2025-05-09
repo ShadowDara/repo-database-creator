@@ -2,7 +2,7 @@
 
 // to generate an SVG file with the Gist count of the User
 
-import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/fetching/main';
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata, createGradientStops } from '../../../lib/fetching';
 
 export async function GET(request: Request) {
   const {

@@ -2,7 +2,7 @@
 
 // to generate the raw public Repository count of a user
 
-import { loadThemes, ThemeMap, getSearchParams, getGHuserdata } from '../../../lib/fetching/main';
+import { loadThemes, ThemeMap, getSearchParams, getGHuserdata } from '../../../lib/fetching';
 
 export async function GET(request: Request) {
   const {
