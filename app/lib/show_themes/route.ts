@@ -1,6 +1,6 @@
 // app/lib/show_themes.ts
 
-import { themes } from '../themes';
+import { themes } from '../js/themes';
 
 let cachedThemes: string | null = null;
 

@@ -15,8 +15,8 @@
 
 
 // import data from Javascript
-import { settings } from './settings';
-import { themes } from './themes';
+import { settings } from './js/settings';
+import { themes } from './js/themes';
 
 
 // ===== DATA CACHING =====

@@ -1,4 +1,4 @@
-// app/lib/sites.js
+// app/lib/js/sites.js
 
 // Every Site on this website is listed here!
 
