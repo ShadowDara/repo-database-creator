@@ -1,6 +1,6 @@
-// app/lib/show_themes.ts
+// show_themes/route.ts
 
-import { themes } from '../js/themes';
+import { themes } from '../themes';
 
 let cachedThemes: string | null = null;
 

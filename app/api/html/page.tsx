@@ -1,6 +1,8 @@
-// app/repos/page.tsx
+// html/page.tsx
 
-// Repair this Page fully!
+// Replace this page soon and run it via 'url.ts' !
+
+// to show the user repositories as a HTML table
 
 import type { Metadata } from "next"
 

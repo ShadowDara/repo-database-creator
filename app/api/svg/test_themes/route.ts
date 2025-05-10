@@ -1,4 +1,4 @@
-// app/api/svg/test_themes/route.ts
+// test_themes/route.ts
 
 // for testing themes without the Github API
 // add theme as an Argument after the link!

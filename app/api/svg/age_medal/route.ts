@@ -1,4 +1,4 @@
-// app/api/svg/repo_count/route.ts
+// repo_count/route.ts
 
 // to generate an SVG file with the Account Age of the Repository User
 

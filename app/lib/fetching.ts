@@ -1,5 +1,3 @@
-// lib/fetching.ts
-
 // made by shadowdara
 // 2025
 // LICENSE: MIT
@@ -15,8 +13,8 @@
 
 
 // import data from Javascript
-import { settings } from './js/settings';
-import { themes } from './js/themes';
+import { settings } from './settings';
+import { themes } from './themes';
 
 
 // ===== DATA CACHING =====

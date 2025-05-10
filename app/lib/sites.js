@@ -1,5 +1,3 @@
-// app/lib/js/sites.js
-
 // Every Site on this website is listed here!
 
 export const sites = [

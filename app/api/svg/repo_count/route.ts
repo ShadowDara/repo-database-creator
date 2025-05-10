@@ -1,4 +1,4 @@
-// app/api/svg/repo_count/route.ts
+// repo_count/route.ts
 
 // to generate an SVG file with the Repository count of the User
 

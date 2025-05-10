@@ -1,3 +1,7 @@
+// contribution_list/route.ts
+
+// to gererate a list of foreign contributions from a user
+
 import { loadThemes, ThemeMap, getSearchParams, getGHevents } from '../../../lib/fetching';
 
 export async function GET(request: Request) {

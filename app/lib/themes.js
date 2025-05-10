@@ -1,5 +1,3 @@
-// app/lib/js/config.js
-
 // More Infos about adding themes in app/lib/README.md or app/lib/_FOR_MOBILE_/README.md
 
 export const themes = {

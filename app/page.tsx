@@ -1,8 +1,4 @@
 // app/page.tsx
-//
-// Homepage - Repo Database Creator
-
-import Image from "next/image";
 
 export const metadata = {
   title: "Repo Database Creator! - Home",

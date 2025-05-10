@@ -1,4 +1,4 @@
-// app/api/svg/repo_count/route.ts
+// repo_count/route.ts
 
 // to generate the raw public Repository count of a user
 
