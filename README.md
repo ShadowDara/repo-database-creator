@@ -29,14 +29,15 @@ Max Table:
 
 ## Index
 - [Showcase](#showcase)
-- [SVG]()
-- [Raw]()
-- [HTML]()
-- [Themes]()
-- [Project Roadmap](#project-roadmap)
-- [Contributing]()
-- [Develeper Infos]()
-
+- [SVGs](#svgs)
+    - [SVG Arguments](#svg-arguments)
+    - [Repository Count Card](#repository-count-card)
+    - [Gist Count Card](#gist-count-card)
+    - [Account Age Card](#account-age-card)
+- [All Themes here!!!](#all-themes-here)
+- [Infos](#infos)
+    - [Project Roadmap](#project-roadmap)
+- [Contributing](#contributing)
 
 ## SVGs
 
@@ -131,6 +132,12 @@ A SVG Picture which shows the age of the Account of a Githubser
 - [x] added 6 color Gradient
 - [ ] add wave  background gradient
 
+
+## Contributing
+
+Contributing to this project is ofcourse apreciated! For more infos read [Contributing.md](INFOS/CONTRIBUTING.md)
+
+---
 
 ## Raw Repopository CSV Table
 
