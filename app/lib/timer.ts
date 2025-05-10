@@ -6,6 +6,7 @@ import { neon } from '@neondatabase/serverless';
 export default function handler(): void {
     console.log('Request Count uploaded to neon!');
     const count = readCounter();
+    /*
     if (!(count === 0)) {
         addRequestCount(count)
         console.log('Request Count uploaded to neon!');
@@ -14,6 +15,11 @@ export default function handler(): void {
         console.log('No requests to upload');
         return;
     }
+    */
+
+    addRequestCount(count)
+        console.log('Request Count uploaded to neon!');
+        return;
 }
 
 
