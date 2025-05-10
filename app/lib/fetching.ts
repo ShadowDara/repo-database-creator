@@ -29,7 +29,7 @@ const repoCache2 = new Map<string, { value: Repository[]; timestamp: number }>()
 const repoCache3 = new Map<string, { value: Events[]; timestamp: number }>();
 
 
-// ===== DATA STRUCTURES =====
+// #region structs
 //
 // Structure for the Userdata from Github
 interface Userdata {
@@ -97,7 +97,7 @@ export function csvEscape(value: string) {
 }
 
 
-// ====== URL REQUEST HANDLING =====
+// #region URL Handling
 //
 // to get the search Params from the Link
 export function getSearchParams(request: Request) {
@@ -117,7 +117,7 @@ export function getSearchParams(request: Request) {
 }
 
 
-// ===== DATA FETCHING ======
+// #region Fetching
 //
 // Fetch Userdata from Github
 export async function getGHuserdata(user: string): Promise<Userdata | null> {
@@ -236,7 +236,7 @@ export async function getGHevents(user: string): Promise<Events[] | null> {
 }
 
 
-// ===== SVG GRADIENT BACKGROUND =====
+// #region SVG Gradient
 //
 // function to make the gradient backgrund for the SVG with up
 // to 6 colors

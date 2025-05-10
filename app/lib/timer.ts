@@ -6,6 +6,7 @@ import { neon } from '@neondatabase/serverless';
 export default function handler(): void {
     console.log('Request Count uploaded to neon!');
     const count = readCounter();
+    
     /*
     if (!(count === 0)) {
         addRequestCount(count)
@@ -18,8 +19,7 @@ export default function handler(): void {
     */
 
     addRequestCount(count)
-        console.log('Request Count uploaded to neon!');
-        return;
+    return;
 }
 
 
@@ -66,8 +66,6 @@ function getFormattedDateTime(): string {
     const day = pad(now.getDate());
 
     const hours = pad(now.getHours());
-    const minutes = pad(now.getMinutes());
-    const seconds = pad(now.getSeconds());
 
-    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+    return `${year}-${month}-${day} ${hours}:00:00`;
 }
