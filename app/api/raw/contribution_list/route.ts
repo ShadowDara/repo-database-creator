@@ -2,7 +2,7 @@
 
 // to gererate a list of foreign contributions from a user
 
-import { loadThemes, ThemeMap, getSearchParams, getGHevents } from '../../../lib/fetching';
+import { getSearchParams, getGHevents } from '../../../lib/fetching';
 
 export async function GET(request: Request) {
   const { user, themeName } = getSearchParams(request);

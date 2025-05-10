@@ -3,10 +3,10 @@
 export const contributers = [
     {
         name: 'Shadowdara',
-        url: 'https://github.com/shadowdara'
+        contact: 'https://github.com/shadowdara'
     },
     {
         name: 'weuritz8u',
-        url: 'https://github.com/weuritz8u'
+        contact: 'https://github.com/weuritz8u'
     }
 ]

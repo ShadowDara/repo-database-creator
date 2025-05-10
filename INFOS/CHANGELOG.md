@@ -3,6 +3,8 @@
 ## Version 0.1.2
 
 - added `INFOS` Folder for `CONTRIBUTING.md` and `CHANGELOG.md`
+- restructerd the `README` file
+- changes the link in `contributors.js` from `url` to `conatct`
 
 ---
 

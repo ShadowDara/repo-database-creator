@@ -7,7 +7,8 @@ because this will very helpful for laters committers to understand your
 code.
 
 When creating a change, please add yourself to the
-[`contributors.js`](/app/lib/contributors.js) file.
+[`contributors.js`](/app/lib/contributors.js) file. Contact be anything, an public
+account, an email address etc...
 
 ## Some Ideas for contributing
 
