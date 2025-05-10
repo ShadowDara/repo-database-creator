@@ -6,10 +6,10 @@
   "author": "Shadowdara",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbpack",
     "poststart": "python3 readme_autocreate/main.py",
-    "build": "next build --turbopack",
-    "start": "next start --turbopack",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
