@@ -13,6 +13,7 @@ Max Table:
 
 *I need to restructure this Readme soon!*
 
+
 ## Showcase
 
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara&theme=daras_green)
@@ -21,14 +22,18 @@ Max Table:
 ![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 ![weuritz8u's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=weuritz8u)
 
+
 ## Index
+- [Showcase]()
 - [SVG]()
 - [Raw]()
 - [HTML]()
 - [Project Roadmap]()
 - [Develeper Infos]()
 
+
 ## SVGs
+
 
 ### SVG Arguments
 
@@ -55,6 +60,7 @@ Max Table:
 
 ---
 
+
 ### Repository Count Card
 
 A SVG Picture which shows the public Repositorys of a Githubuser
@@ -66,6 +72,7 @@ A SVG Picture which shows the public Repositorys of a Githubuser
 ![Shadowdara's Repository Count Card](https://repo-database-creator.vercel.app/api/svg/repo_count?user=shadowdara)
 
 ---
+
 
 ### Gist Count Card
 
@@ -79,6 +86,7 @@ A SVG Picture which shows the public Gists of a Githubser
 
 ---
 
+
 ### Account Age Card
 
 A SVG Picture which shows the age of the Account of a Githubser
@@ -91,13 +99,16 @@ A SVG Picture which shows the age of the Account of a Githubser
 
 ---
 
+
 ## [All Themes here!!!](app/lib/README.md)
 
 ---
 
+
 ## Infos
 
 - we use caching to prevent server usage *(24 hours)*
+
 
 ### Project Roadmap
 
@@ -128,6 +139,7 @@ A SVG Picture which shows the age of the Account of a Githubser
         <th>Link</th>
     </tr>
 </table>
+
 
 ### Arguments
 
@@ -260,6 +272,7 @@ value when the argument is not given!
     </tr>
 </table>
 
+
 ## Dev open
 
 <a href="https://repo-database-creator.vercel.app/api/repos_raw">Main Page</a>
@@ -267,13 +280,19 @@ value when the argument is not given!
 
 ---
 
+
 ### [Why is here Python](readme_autocreate/README.md)
 
+- This should be replace soon with javascript but i am currently to lazy
+to do that :(
+
 ---
+
 
 # Old Reademe Part (i am not finished yet)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
 
 ## Getting Started
 
@@ -295,6 +314,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
@@ -303,6 +323,7 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
 
 ## Deploy on Vercel
 
