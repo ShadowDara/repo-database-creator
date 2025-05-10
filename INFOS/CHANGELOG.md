@@ -1,5 +1,11 @@
 # Changelog
 
+## Version 0.1.2
+
+- added `INFOS` Folder for `CONTRIBUTING.md` and `CHANGELOG.md`
+
+---
+
 ## Version 0.1.1
 
 - added contribution list

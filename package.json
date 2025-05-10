@@ -1,6 +1,6 @@
 {
   "name": "repo-database-creator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": true,
   "description": "a project to create a database of all the repositories in the organization and convert them to a format that can be used by the website",
   "author": "Shadowdara",

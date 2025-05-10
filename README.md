@@ -9,9 +9,13 @@ Max Table:
 
 # Repository Database Creator
 
+<!--
+
 ***Check it out [here](https://repo-database-creator.vercel.app/api/repos?user=weuritz8u&raw=false) for User `weuritz8u`***
 
 *I need to restructure this Readme soon!*
+
+-->
 
 
 ## Showcase
@@ -24,11 +28,13 @@ Max Table:
 
 
 ## Index
-- [Showcase]()
+- [Showcase](#showcase)
 - [SVG]()
 - [Raw]()
 - [HTML]()
-- [Project Roadmap]()
+- [Themes]()
+- [Project Roadmap](#project-roadmap)
+- [Contributing]()
 - [Develeper Infos]()
 
 
