@@ -17,6 +17,7 @@ Max Table:
 
 -->
 
+*fetching the Github API the generate some stats!*
 
 ## Showcase
 
