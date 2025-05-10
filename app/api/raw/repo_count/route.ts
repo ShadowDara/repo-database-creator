@@ -11,15 +11,6 @@ export async function GET(request: Request) {
   } = getSearchParams(request);
 
   try {
-    const themes = await loadThemes();
-
-    if (!themes || typeof themes !== 'object') {
-      console.error("Themes not loaded or invalid:", themes);
-      return new Response("Theme loading failed", { status: 500 });
-    }
-
-    const theme = (themes as ThemeMap)[themeName];
-
     if (!user || typeof user !== "string") {
       return new Response("Missing or invalid 'user' parameter", { status: 400 });
     }
