@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "poststart": "python3 readme_autocreate/main.py",
-    "build": "next build",
+    "build": "next build --turbopack",
     "start": "next start --turbopack",
     "lint": "next lint"
   },
