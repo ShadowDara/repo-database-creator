@@ -21,6 +21,13 @@ Max Table:
 ![Shadowdara's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=shadowdara)
 ![weuritz8u's Account Age Card](https://repo-database-creator.vercel.app/api/svg/age_medal?user=weuritz8u)
 
+## Index
+- [SVG]()
+- [Raw]()
+- [HTML]()
+- [Project Roadmap]()
+- [Develeper Infos]()
+
 ## SVGs
 
 ### SVG Arguments
