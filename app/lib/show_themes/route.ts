@@ -1,10 +1,10 @@
 // show_themes/route.ts
 
-import { themes } from '../themes';
+import { themes} from '../themes';
 
 let cachedThemes: string | null = null;
 
-export async function GET(request: Request) {
+export async function GET() {
     if (!cachedThemes) {
         cachedThemes = JSON.stringify(themes);
         console.warn("Themes loaded and cached.");
